@@ -96,7 +96,7 @@ def fetch_journals():
     params = {
         "filter": ",".join(filters),
         "rows": PAGE_SIZE,
-        "select": "DOI,title,abstract,author,container-title,URL,published,issued",
+        "select": "DOI,title,abstract,author,container-title,URL,published,issued,created",
         "cursor": "*",                    # "*" means: start at the first page
     }
     headers = {"User-Agent": f"paper-digest (mailto:{CONFIG['contact_email']})"}
@@ -129,7 +129,10 @@ def fetch_journals():
             "source": (item.get("container-title") or ["Journal"])[0],
             "category": "",
             "kind": "journal",
-            "published": crossref_date(item),
+            # the day the paper was registered = the day it went online; issue
+            # dates (e.g. Elsevier's "2027-03") are only a fallback
+            "published": (item.get("created") or {}).get("date-time", "")[:10]
+                         or crossref_date(item),
             "url": item["URL"],
         })
     return papers
@@ -352,19 +355,43 @@ def plain(text):
     return "".join(c for c in text if not unicodedata.combining(c)).lower()
 
 
+def no_latex(text):
+    """Remove LaTeX markup so formulas read as plain text:
+    'Dy$_2$Ti$_2$O$_7$' -> 'Dy2Ti2O7',  '$\\alpha$-RuCl$_3$' -> '-RuCl3'."""
+    text = re.sub(r"\\[a-zA-Z]+", "", text)       # commands such as \mathrm, \alpha
+    return re.sub(r"[$_^{}\\]", "", text)          # the symbols $ _ ^ { } \
+
+
+def squeeze(text):
+    """Letters and digits only: 'Dy 2 Ti 2 O 7' -> 'dy2ti2o7'."""
+    return re.sub(r"[^a-z0-9]", "", text.lower())
+
+
+def has_term(term, text, squeezed):
+    """Normal keywords must start at a word boundary (see found()).
+    Keywords containing a digit are chemical formulas ('dy2ti2o7', 'mnbi2te4'):
+    journals often space them out ('Dy 2 Ti 2 O 7'), so for those we also
+    compare with all spaces and symbols removed."""
+    if found(term, text):
+        return True
+    return any(c.isdigit() for c in term) and squeeze(term) in squeezed
+
+
 def topic_match(title, text, terms):
     """Return (score, matched keywords) for one topic. Title hits count double."""
-    matched = [t for t in terms if found(t, text)]
+    title_sq, text_sq = squeeze(title), squeeze(text)
+    matched = [t for t in terms if has_term(t, text, text_sq)]
     # A keyword written without a number in topics.yaml counts as weight 1
-    score = sum((terms[t] or 1) * (2 if found(t, title) else 1) for t in matched)
+    score = sum((terms[t] or 1) * (2 if has_term(t, title, title_sq) else 1)
+                for t in matched)
     return score, matched
 
 
 def classify(paper):
     """Score one paper. Returns None if it is not relevant, else the paper plus
     topic, score, matched keywords, watched authors and a top-pick flag."""
-    title = paper["title"].lower()
-    text = title + " " + paper["abstract"].lower()
+    title = no_latex(paper["title"]).lower()
+    text = title + " " + no_latex(paper["abstract"]).lower()
 
     hits = {}                                    # topic -> (score, matched keywords)
     for topic, terms in CONFIG["topics"].items():
@@ -374,14 +401,20 @@ def classify(paper):
 
     authors = plain(paper["authors"])
     watched = [name for name in CONFIG.get("watch_authors", []) if plain(name) in authors]
+    # Another researcher can share the same name (a "Yishu Wang" in medicine
+    # once appeared). A watched author only counts if the paper also matches at
+    # least one of your keywords; papers by your watched authors will always
+    # mention magnetism, neutrons, etc. Affiliations can't be used instead:
+    # arXiv doesn't provide them and most publishers don't send them to Crossref.
+    if not hits:
+        watched = []
 
     total = sum(s for s, _ in hits.values()) + (5 if watched else 0)
     if total < CONFIG["min_score"] and not watched:
         return None
 
-    # File the paper under its best topic; watched-author papers with no topic
-    # match get their own section.
-    topic = max(hits, key=lambda t: hits[t][0]) if hits else WATCHED
+    # File the paper under its best-matching topic
+    topic = max(hits, key=lambda t: hits[t][0])
     keywords = list(dict.fromkeys(k for _, matched in hits.values() for k in matched))
     paper.update(topic=topic, score=total, matched=keywords, watched=watched,
                  featured=bool(watched) or total >= FEATURED_SCORE)

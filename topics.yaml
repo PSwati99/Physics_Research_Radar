@@ -1,237 +1,508 @@
-days_back: 7
+# ==================================================================
+#  Physics Research Radar - settings
+#  Edit this file to change what the weekly digest collects.
+# ==================================================================
+
+days_back: 14         # how many days back each run looks. 14 for the FIRST run only, then change to 7
 min_score: 4          # papers scoring below this are dropped (raise it for fewer, tighter results)
 featured_score: 8     # papers at or above this score, or by a watched author, become "top picks"
-max_per_topic: 20
-contact_email: paher@vols.utk.edu
+max_per_topic: 20     # at most this many papers shown per topic each week
+contact_email: sswati1@vols.utk.edu   # sent to Crossref only, never shown on the website
 
+# arXiv categories: every paper submitted to these is downloaded, then scored
 arxiv_categories:
-  - cond-mat.supr-con
-  - cond-mat.mes-hall
-  - cond-mat.mtrl-sci
-  - physics.app-ph
+  - cond-mat.str-el      # strongly correlated: spin ice, spin liquids, quantum magnets
+  - cond-mat.mes-hall    # mesoscale: spintronics, spin Seebeck, spin transport
+  - cond-mat.mtrl-sci    # materials: thin films, interfaces, quantum materials
+  - cond-mat.stat-mech   # statistical mechanics: quench, nonequilibrium, spin glass, Monte Carlo
+  - cond-mat.dis-nn      # disordered systems: spin glasses, machine learning in physics
+  - physics.ins-det      # instrumentation and detectors
+  - physics.app-ph       # applied physics: sensing, magnetometry, devices
 
+# Journals, found through the Crossref API by ISSN
 journals:
   Physical Review Letters: "0031-9007"
   Physical Review B: "2469-9950"
-  Physical Review Applied: "2331-7019"
+  Physical Review X: "2160-3308"
   Physical Review Materials: "2475-9953"
-  Nature Physics: "1745-2473"
-  Nature Communications: "2041-1723"
-  Nature Materials: "1476-1122"
-  Nano Letters: "1530-6984"
-  ACS Nano: "1936-086X"
-  Applied Physics Letters: "0003-6951"
-  Journal of Crystal Growth: "0022-0248"
-  Superconductor Science and Technology: "0953-2048"
+  Physical Review Applied: "2331-7019"
   Physical Review Research: "2643-1564"
+  Nature Physics: "1745-2473"
+  Nature Materials: "1476-1122"
+  Nature Communications: "2041-1723"
+  Science: "0036-8075"
+  npj Quantum Materials: "2397-4648"
+  Journal of Magnetism and Magnetic Materials: "0304-8853"
+  Applied Physics Letters: "0003-6951"
+  Journal of Physics Condensed Matter: "0953-8984"
+  Review of Scientific Instruments: "0034-6748"
+  Nuclear Instruments and Methods A: "0168-9002"
+  Journal of Applied Crystallography: "1600-5767"
+  Journal of Instrumentation: "1748-0221"
+  Journal of Neutron Research: "1023-8166"
+  Cryogenics: "0011-2275"
 
 topics:
   # Format:  keyword: weight.  A keyword in the title counts double.
   # Weights: 4-5 = very specific phrase, 2-3 = fairly specific, 1 = broad word.
+  # Keywords match the START of a word: "frustrat" matches frustrated, frustration.
   # A paper needs a total of min_score to show up; featured_score or more = top pick.
 
-  MBE Growth of Superconductors:
-    molecular beam epitaxy: 3
-    mbe-grown: 3
-    mbe growth: 3
-    beta-sn: 5
-    alpha-sn: 4
-    sn epitaxy: 5
-    tin film: 3
-    sn thin film: 4
-    epitaxial niobium: 4
-    epitaxial nb: 4
-    epitaxial aluminum: 4
-    epitaxial al: 3
-    superconducting thin film: 2
-    rheed: 3
-    cryogenic deposition: 3
-    low-temperature growth: 2
-    domain matching epitaxy: 4
-    lattice mismatch: 2
-    substrate temperature: 1
-    wetting: 1
+  # ---------------- Core research ----------------
 
-  Superconductor-Semiconductor Interfaces:
-    superconductor-semiconductor: 4
-    semiconductor-superconductor: 4
-    superconductor/semiconductor: 4
-    inas/al: 4
-    al/inas: 4
-    inassb: 4
-    inas/nb: 4
-    gaas/nb: 5
-    gasb: 3
-    gaas(111): 3
-    inas(111): 3
-    interface transparency: 3
-    hard gap: 3
-    induced gap: 3
-    band bending: 2
-    two-dimensional electron gas: 2
-    in situ capping: 3
-    shadow: 1
-    heterostructure: 1
+  Spin Ice & Frustrated Magnetism:
+    spin ice: 5
+    artificial spin ice: 5
+    magnetic monopole: 5
+    quantum spin ice: 5
+    kagome ice: 5
+    dy2ti2o7: 5
+    ho2ti2o7: 5
+    pyrochlore: 4
+    geometric frustration: 4
+    frustrated magnet: 4
+    magnetic frustration: 4
+    ice rule: 4
+    pauling entropy: 4
+    monopole dynamics: 4
+    kagome: 3
+    residual entropy: 3
+    monopole: 3
+    dipolar spin: 3
+    frustrat: 2
 
-  Nanowire Selective Area and Template-Assisted Growth:
-    template-assisted selective epitaxy: 5
-    tase: 4
-    selective area growth: 4
-    selective-area: 3
-    sag growth: 4
-    shadow-bridge: 4
-    shadow wall: 3
-    nanowire: 2
-    inas nanowire: 4
-    silicon-on-insulator: 3
-    soi: 1
-    vapor-liquid-solid: 3
-    hybrid nanowire: 3
+  Spin Glass & Disordered Magnetism:
+    spin glass: 5
+    spin-glass: 5
+    edwards-anderson: 5
+    sherrington-kirkpatrick: 5
+    spin freezing: 4
+    cluster glass: 4
+    glassy magnet: 4
+    magnetic aging: 4
+    rejuvenation: 4
+    replica symmetry: 4
+    glassy dynamics: 3
+    memory effect: 3
+    random field: 3
+    random-field: 3
+    dilute magnet: 3
+    reentrant: 3
+    aging: 2
+    glassy: 2
+    frozen: 2
 
-  Nanofabrication and Cleanroom Processes:
-    electron beam lithography: 3
-    e-beam lithography: 3
-    ebl: 2
-    plasma etching: 3
-    reactive ion etching: 3
-    atomic layer deposition: 3
-    ald: 1
-    pecvd: 3
-    lift-off: 2
-    hard mask: 3
-    surface cleaning: 3
-    oxide removal: 3
-    descum: 3
-    resist: 1
-    device fabrication: 2
-    fabrication process: 2
-    low-disorder: 3
-    contact resistance: 2
+  Thermal Transport & Nonequilibrium Phenomena:
+    thermal quench: 5
+    kibble-zurek: 5
+    thermal hall: 5
+    phonon hall: 5
+    thermal transport: 4
+    thermal conductivity: 4
+    heat transport: 4
+    thermally driven: 4
+    thermally induced: 4
+    magnetic relaxation: 4
+    ultrafast demagnetization: 4
+    nernst effect: 3
+    anomalous nernst: 3
+    thermoelectric: 3
+    phonon transport: 3
+    slow dynamics: 3
+    relaxation dynamics: 3
+    cooling rate: 3
+    rapid cooling: 3
+    coarsening: 3
+    ac susceptibility: 3
+    quench: 2
+    nonequilibrium: 2
+    non-equilibrium: 2
+    out-of-equilibrium: 2
+    metastable: 2
+    temperature gradient: 2
 
-  Germanium and Sn-Ge Epitaxy:
-    germanium: 3
-    gesn: 5
-    sn-ge: 4
-    ge-sn: 4
-    sige: 3
-    ge/sige: 4
-    ge/si: 3
-    ge quantum well: 4
-    ge hole gas: 4
-    planar germanium: 4
-    germanium quantum well: 5
-    ge(001): 3
-    ge(111): 3
-    strained germanium: 4
-    ge heterostructure: 4
-    hole gas: 2
-    hole spin qubit: 2
-    ge josephson: 5
-    ge-based josephson: 5
-    superconductor/germanium: 4
-    germanium-superconductor: 4
-    al/ge: 4
-    pt germanide: 4
-    germanide: 3
-    sn on ge: 5
-    sn/ge: 5
+  Spintronics & Spin Seebeck Effect:
+    spin seebeck: 5
+    spin caloritronics: 5
+    spin mixing conductance: 5
+    spintronic: 5
+    magnonic: 5
+    magnon transport: 4
+    spin pumping: 4
+    inverse spin hall: 4
+    spin hall magnetoresistance: 4
+    spin nernst: 4
+    spinon: 4
+    spin-orbit torque: 4
+    spin-transfer torque: 4
+    ferromagnetic resonance: 4
+    gilbert damping: 4
+    spin current: 3
+    spin transport: 3
+    magnon spin: 3
+    thermal spin: 3
+    spin valve: 3
+    magnetic tunnel junction: 3
+    magnetization switching: 3
+    domain wall motion: 3
+    magnon: 2
+    spin hall effect: 2
+    magnetoresistance: 2
+    spin-orbit: 2
 
-  Planar Josephson Junctions:
-    planar josephson: 5
-    planar junction: 4
-    planar josephson junction: 5
-    planar superconductor-normal-superconductor: 4
-    planar sns: 4
-    two-dimensional josephson: 3
-    2deg josephson: 4
-    topological planar: 4
-    phase-controlled: 3
-    phase-biased: 3
-    josephson junction array: 2
-    wide junction: 2
-    junction width: 2
-    in-plane magnetic field: 2
-    sn-based planar: 5
-    sn josephson: 5
-    tin josephson: 5
+  Magnetic Interfaces & YIG/Pt:
+    yttrium iron garnet: 5
+    yig/pt: 5
+    pt/yig: 5
+    yig: 4
+    tmig: 4
+    interfacial magnetism: 4
+    magnetic dead layer: 4
+    gd3ga5o12: 4
+    magnetic insulator: 3
+    ferrimagnetic insulator: 3
+    antiferromagnetic insulator: 3
+    magnetic interface: 3
+    magnetic proximity: 3
+    exchange bias: 3
+    interface anisotropy: 3
+    ggg: 3
+    garnet: 2
+    heavy metal: 2
 
-  Single Junction and Sn-Based Devices:
-    single josephson junction: 4
-    individual josephson junction: 4
-    sn-based junction: 5
-    sn junction: 4
-    tin junction: 4
-    sn/inas: 5
-    sn/insb: 5
-    sn/gasb: 5
-    sn/gaas: 5
-    sn/si: 3
-    sn/inassb: 5
-    sn-based: 3
-    sn-based superconduct: 4
-    sn-based device: 4
-    tin-based: 3
-    sn nanowire: 4
-    sn contact: 3
-    current-phase relation: 3
-    junction transparency: 3
-    ballistic junction: 3
+  Polarized Neutron Reflectometry:
+    polarized neutron reflectometry: 5
+    polarised neutron reflectometry: 5
+    neutron reflectometry: 5
+    neutron reflectivity: 5
+    magnetic depth profile: 4
+    scattering length density: 4
+    resonant x-ray reflectivity: 4
+    refl1d: 4
+    pnr: 3
+    x-ray reflectivity: 3
+    x-ray reflectometry: 3
+    xrr: 3
+    off-specular: 3
+    genx: 3
+    depth profile: 2
 
-  Josephson and Proximity Effects:
-    josephson junction: 3
-    gate-tunable josephson: 5
-    gate-tunable supercurrent: 5
-    gatemon: 4
-    proximity effect: 3
-    proximity-induced: 3
-    andreev reflection: 3
-    andreev bound state: 3
-    multiple andreev reflection: 4
-    fraunhofer: 3
-    shapiro: 3
-    squid: 2
-    weak antilocalization: 3
-    rashba: 2
-    spin-orbit coupling: 1
-    supercurrent: 1
-    critical current: 1
+  Quantum & Correlated Magnetism:
+    quantum magnetism: 5
+    spin-1/2 chain: 5
+    quantum spin chain: 5
+    quantum magnet: 4
+    strongly correlated: 4
+    correlated magnet: 4
+    mott insulator: 4
+    spin chain: 4
+    spin ladder: 4
+    heisenberg chain: 4
+    low-dimensional magnet: 4
+    one-dimensional magnet: 4
+    tomonaga-luttinger: 4
+    quantum phase transition: 3
+    quantum critical: 3
+    heisenberg model: 3
+    hubbard model: 3
+    kondo: 3
+    heavy fermion: 3
+    orbital order: 3
+    exchange interaction: 3
+    magnetic order: 3
+    quasi-one-dimensional: 3
+    two-dimensional magnet: 3
+    van der waals magnet: 3
+    spin dimer: 3
+    triangular lattice: 3
+    haldane: 3
+    berezinskii: 3
+    correlated electron: 2
+    antiferromagnet: 2
+    quasi-two-dimensional: 2
+    honeycomb lattice: 2
 
-  Majorana and Topological Superconductivity:
-    majorana: 4
-    topological superconduct: 4
-    topological qubit: 3
-    zero-bias peak: 3
-    topological gap protocol: 4
-    topological insulator/superconductor: 4
-    ti/sc: 3
-    bi2se3: 2
-    bi2te3: 2
-    topological insulator: 1
-    parity: 1
+  # ---------------- Neutron science & instrumentation ----------------
 
-  Altermagnets and Novel Heterostructures:
+  Neutron Scattering Techniques:
+    inelastic neutron: 5
+    quasielastic neutron: 5
+    quasi-elastic neutron: 5
+    neutron spin echo: 5
+    neutron scattering: 4
+    neutron diffraction: 4
+    polarized neutron: 4
+    small-angle neutron: 4
+    neutron spectroscopy: 4
+    triple-axis: 4
+    spallation neutron source: 4
+    high flux isotope reactor: 4
+    hfir: 4
+    diffuse scattering: 3
+    pair distribution function: 3
+    spin echo: 3
+    isis: 3
+    j-parc: 3
+    μsr: 3
+    muon spin: 3
+    sans: 2
+    magnetic structure: 2
+    spin wave: 2
+    magnetic excitation: 2
+    time-of-flight: 2
+
+  Neutron Instrumentation & Detectors:
+    neutron detector: 5
+    neutron polarizer: 5
+    mcstas: 5
+    neutron detection: 4
+    neutron instrument: 4
+    neutron optics: 4
+    neutron guide: 4
+    supermirror: 4
+    spin flipper: 4
+    boron-10: 4
+    position-sensitive detector: 4
+    mantid: 4
+    scintillator: 3
+    neutron source: 3
+    neutron imaging: 3
+    monochromator: 3
+    helium-3: 3
+    data reduction: 3
+    beamline: 2
+    chopper: 2
+    polarizer: 2
+
+  Cryogenic Measurements & Instrumentation:
+    dilution refrigerator: 5
+    cryostat: 4
+    cryogen-free: 4
+    adiabatic demagnetization: 4
+    millikelvin: 4
+    thermometry: 4
+    cernox: 4
+    superconducting magnet: 4
+    superconducting coil: 4
+    vector magnet: 4
+    sample environment: 4
+    cryocooler: 4
+    pulse tube: 4
+    cryogenic: 3
+    magnet system: 3
+    pulsed magnetic field: 3
+    pulsed field: 3
+    low-temperature measurement: 3
+    thermal conductivity measurement: 3
+    heat capacity: 2
+    specific heat: 2
+
+  Scientific Instrumentation & Automation:
+    laboratory automation: 5
+    experiment automation: 5
+    pymeasure: 5
+    qcodes: 5
+    automated measurement: 4
+    instrument control: 4
+    labview: 4
+    epics: 4
+    autonomous experiment: 4
+    self-driving lab: 4
+    control system: 3
+    data acquisition: 3
+    lock-in amplifier: 3
+    fpga: 3
+    instrumentation: 2
+    measurement setup: 2
+    lock-in: 2
+
+  Thin Films & Interface Characterization:
+    interface characterization: 4
+    interface roughness: 3
+    interdiffusion: 3
+    pulsed laser deposition: 3
+    depth profiling: 3
+    thin film: 2
+    epitaxial: 2
+    sputter: 2
+    magnetron: 2
+    heterostructure: 2
+    film thickness: 2
+    molecular beam epitaxy: 2
+    rheed: 2
+    xps: 2
+    x-ray photoelectron: 2
+    interfacial: 1
+    x-ray diffraction: 1
+    strain: 1
+    atomic force microscopy: 1
+    transmission electron microscopy: 1
+
+  # ---------------- Computation & data ----------------
+
+  Scientific Modeling & Data Analysis:
+    refl1d: 5
+    motofit: 5
+    sasview: 5
+    spinw: 5
+    genx: 4
+    mantid: 4
+    reflectometry analysis: 4
+    scattering length density: 4
+    bayesian inference: 4
+    uncertainty quantification: 4
+    markov chain monte carlo: 4
+    mcmc: 4
+    parameter estimation: 4
+    rietveld: 4
+    model fitting: 4
+    data fitting: 4
+    data analysis: 3
+    data reduction: 3
+    least-squares: 3
+    inverse problem: 3
+    python package: 3
+    open-source software: 3
+    modeling: 1
+    modelling: 1
+
+  Monte Carlo & Computational Methods:
+    quantum monte carlo: 5
+    classical monte carlo: 5
+    monte carlo simulation: 5
+    monte carlo: 4
+    metropolis: 4
+    parallel tempering: 4
+    worm algorithm: 4
+    loop algorithm: 4
+    reverse monte carlo: 4
+    exact diagonalization: 4
+    dmrg: 4
+    density matrix renormalization: 4
+    tensor network: 4
+    linear spin wave: 4
+    atomistic spin: 4
+    micromagnetic: 3
+    landau-lifshitz-gilbert: 3
+    spin dynamics simulation: 3
+    molecular dynamics: 3
+    first-principles: 3
+    ab initio: 3
+    density functional: 2
+    dft: 2
+    numerical simulation: 2
+
+  Machine Learning & Bayesian Optimization:
+    bayesian optimization: 5
+    bayesian optimisation: 5
+    gaussian process: 5
+    active learning: 5
+    autonomous experiment: 5
+    self-driving lab: 5
+    machine learning: 4
+    machine-learning: 4
+    deep learning: 4
+    neural network: 4
+    reinforcement learning: 4
+    surrogate model: 4
+    physics-informed: 4
+    bayesian: 3
+    artificial intelligence: 3
+    generative model: 3
+    autoencoder: 3
+    random forest: 3
+    data-driven: 2
+
+  # ---------------- Broader discovery ----------------
+
+  Quantum Spin Liquids & Exotic Magnetic States:
+    quantum spin liquid: 5
+    chiral spin liquid: 5
+    spinon fermi surface: 5
+    spin liquid: 4
+    kitaev: 4
+    rucl: 4
+    resonating valence bond: 4
+    spin nematic: 4
+    fractionaliz: 3
+    emergent gauge: 3
+    multipolar: 3
+    magnetic skyrmion: 3
+    topological order: 2
+    skyrmion: 2
+
+  Quantum Sensing & Magnetic Characterization:
+    quantum sensing: 5
+    quantum sensor: 5
+    nv center: 5
+    nv centre: 5
+    nitrogen-vacancy: 5
+    nv magnetometry: 5
+    relaxometry: 5
+    vibrating sample magnetometer: 4
+    vsm: 4
+    squid magnetometry: 4
+    scanning squid: 4
+    diamond magnetometry: 4
+    lorentz tem: 4
+    magnetization measurement: 4
+    magnetic characterization: 4
+    magnetic susceptibility: 4
+    ferromagnetic resonance: 3
+    electron spin resonance: 3
+    esr: 3
+    xmcd: 3
+    x-ray magnetic circular dichroism: 3
+    magnetic force microscopy: 3
+    kerr microscopy: 3
+    moke: 3
+    spin noise: 3
+    magnetic noise: 3
+    boron vacancy: 3
+    magnetometry: 2
+    magneto-optical: 2
+    susceptibility: 2
+    magnetization: 2
+
+  Topological Materials:
+    topological insulator: 5
+    topological semimetal: 5
+    weyl semimetal: 5
+    dirac semimetal: 5
+    magnetic topological insulator: 5
+    quantum anomalous hall: 5
+    mnbi2te4: 5
+    topological magnon: 5
+    weyl: 4
+    chern insulator: 4
+    axion insulator: 4
+    topological crystalline: 4
+    topological surface state: 4
+    berry curvature: 4
+    anomalous hall: 4
+    dirac: 3
+    nodal line: 3
+    band topology: 3
+    spin-momentum locking: 3
+    berry phase: 3
+    edge state: 3
+    bi2se3: 3
+    bi2te3: 3
+    topological: 2
+
+  Novel Quantum Materials:
     altermagnet: 4
-    mnte: 4
-    altermagnetic: 4
-    biAs: 2
-    bismuth monolayer: 3
-    magnetic proximity: 2
-    superconductor/altermagnet: 5
-    antiferromagnet/superconductor: 3
+    quantum material: 3
+    kagome metal: 3
+    van der waals magnet: 3
+    2d magnet: 3
+    heavy fermion: 2
+    twisted bilayer: 2
+    moir: 1
+    rare-earth: 1
 
-# Matched against the author list ignoring case and accents, as a substring.
-# arXiv often lists middle initials ("Leo P. Kouwenhoven"), so use a surname
-# alone when it is rare, and full names when it is common.
+# Watched authors: their papers ALWAYS appear and become top picks.
+# Matched against the author list ignoring capitals and accents.
+# To add someone: new line, two spaces, dash, space, then the name.
 watch_authors:
-  - Joon Sue Lee
-  - Javad Shabani
-  - Charles M. Marcus
-  - Kouwenhoven
-  - Bakkers
-  - Krogstrup
-  - William Schiela
-  - Thomas Schapers
-  - Christopher Strunk
-  - Tyrel McQueen
-  - Yong P. Chen
-  - Nygard
+  - Yishu Wang

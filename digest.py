@@ -5,6 +5,7 @@ Weekly paper digest
             (via the Crossref API, by ISSN).
    FILL   - abstracts missing from Crossref, looked up in OpenAlex and
             Semantic Scholar.
+   DEDUPE - drop papers whose arXiv and journal versions both turn up.
 2. SCORE  - each paper against the weighted keywords in topics.yaml.
 3. SAVE   - docs/digests/<date>.json, which the website in docs/ displays.
 
@@ -254,6 +255,59 @@ def fill_missing_abstracts(papers):
 
 
 # ------------------------------------------------------------------
+# 1c. REMOVE DUPLICATES (same work on arXiv and in a journal)
+# ------------------------------------------------------------------
+# A preprint often appears on arXiv first and in a journal weeks later.
+# We recognise the pair in two ways:
+#   - the journal paper's arXiv ID (found by fill_missing_abstracts), which
+#     also works across weeks because seen.json stores every arXiv ID shown;
+#   - an identical title within this week's papers (ignoring case, spaces,
+#     LaTeX and punctuation), for journal papers without a known arXiv ID.
+# When both versions arrive in the same week we keep the journal version
+# (it has the DOI) and borrow the arXiv abstract if the journal had none.
+
+def title_key(title):
+    """'Spin Ice in Dy$_2$Ti$_2$O$_7$!' -> 'spiniceindy2ti2o7': letters and digits only."""
+    return re.sub(r"[^a-z0-9]", "", title.lower())
+
+
+def remove_duplicates(papers, seen):
+    arxiv_by_id = {p["id"]: p for p in papers if p["kind"] == "arxiv"}
+    arxiv_by_title = {title_key(p["title"]): p for p in arxiv_by_id.values()}
+    drop = set()                           # ids of papers to remove
+    by_id = by_title = 0
+
+    for p in papers:
+        if p["kind"] != "journal":
+            continue
+        twin_id = "arxiv:" + p["arxiv_id"] if p.get("arxiv_id") else None
+
+        if twin_id and twin_id in seen:    # preprint already shown in an earlier week
+            drop.add(p["id"])
+            by_id += 1
+            continue
+
+        twin = arxiv_by_id.get(twin_id)   # preprint arrived this same week?
+        matched_by_title = False
+        if not twin:
+            key = title_key(p["title"])
+            if len(key) > 20:              # skip very short titles like "Erratum"
+                twin = arxiv_by_title.get(key)
+                matched_by_title = twin is not None
+        if twin:
+            if not p["abstract"]:
+                p["abstract"] = twin["abstract"]
+            p["arxiv_id"] = twin["id"][6:]
+            drop.add(twin["id"])           # keep the journal version
+            by_title += matched_by_title
+            by_id += not matched_by_title
+
+    if drop:
+        print(f"Duplicates removed: {len(drop)} ({by_id} by arXiv ID, {by_title} by title)")
+    return [p for p in papers if p["id"] not in drop]
+
+
+# ------------------------------------------------------------------
 # 2. SCORE
 # ------------------------------------------------------------------
 def found(term, text):
@@ -362,7 +416,7 @@ def load_existing(path):
 
 
 FIELDS = ["id", "title", "authors", "abstract", "source", "category", "kind",
-          "url", "published", "score", "matched", "watched", "featured"]
+          "url", "published", "score", "matched", "watched", "featured", "arxiv_id"]
 
 
 def save_digest(path, by_topic):
@@ -400,6 +454,7 @@ def main():
     fresh = [p for p in fetch_all() if p["id"] not in seen]
     print(f"Fetched {len(fresh)} new papers")
     fill_missing_abstracts(fresh)
+    fresh = remove_duplicates(fresh, seen)
 
     picked = [p for p in map(classify, fresh) if p]
     print(f"{len(picked)} match your topics")
@@ -417,6 +472,10 @@ def main():
 
     # Remember only what was actually saved
     seen |= {p["id"] for items in by_topic.values() for p in items if "id" in p}
+    # Also remember the arXiv ID of each saved journal paper, so its preprint
+    # is not shown again if it is posted to arXiv later.
+    seen |= {"arxiv:" + p["arxiv_id"] for items in by_topic.values() for p in items
+             if p.get("arxiv_id")}
     SEEN_FILE.write_text(json.dumps(sorted(seen), indent=0))
 
 

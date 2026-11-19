@@ -176,6 +176,31 @@ def abstract_from_inverted_index(index):
     return " ".join(words[i] for i in sorted(words))
 
 
+RETRY_WAITS = [10, 30, 60]   # seconds to wait before each retry after "too many requests"
+
+
+def ask(service, method, url, **kwargs):
+    """Send one request; on "too many requests" (429) or a server error (5xx),
+    wait and try again (10 s, 30 s, 60 s). Returns the answer if it succeeded,
+    otherwise prints the reason in the log and returns None."""
+    for attempt in range(len(RETRY_WAITS) + 1):
+        try:
+            resp = requests.request(method, url, timeout=90, **kwargs)
+        except requests.RequestException as err:      # no answer at all (network problem)
+            print(f"{service}: no answer ({err})")
+            return None
+        if resp.status_code == 200:
+            return resp
+        retryable = resp.status_code == 429 or resp.status_code >= 500
+        if not retryable or attempt == len(RETRY_WAITS):
+            reason = " ".join(resp.text.split())[:200]  # first part of the error message
+            print(f"{service} answered {resp.status_code}: {reason}")
+            return None
+        wait = RETRY_WAITS[attempt]
+        print(f"{service} answered {resp.status_code}; waiting {wait} s and retrying")
+        time.sleep(wait)
+
+
 def fill_from_openalex(papers):
     """Fill abstracts (and arXiv IDs) for `papers` from OpenAlex, 50 at a time."""
     by_doi = {p["id"][4:]: p for p in papers}          # "doi:10.1103/..." -> "10.1103/..."
@@ -188,9 +213,11 @@ def fill_from_openalex(papers):
             "select": "doi,abstract_inverted_index,locations",
             "mailto": CONFIG["contact_email"],            # OpenAlex's "polite pool"
         }
-        results = requests.get("https://api.openalex.org/works",
-                               params=params, timeout=60).json().get("results", [])
-        for work in results:
+        resp = ask("OpenAlex", "GET", "https://api.openalex.org/works", params=params)
+        if resp is None:
+            print("OpenAlex: stopping for this week")
+            return                                         # the reason is already in the log
+        for work in resp.json().get("results", []):
             doi = (work.get("doi") or "").lower().replace("https://doi.org/", "")
             paper = by_doi.get(doi)
             if not paper:
@@ -209,14 +236,13 @@ def fill_from_semantic_scholar(papers):
     """Fill remaining abstracts (and arXiv IDs) from Semantic Scholar, 500 at a time."""
     for start in range(0, len(papers), 500):
         chunk = papers[start:start + 500]
-        resp = requests.post(
-            "https://api.semanticscholar.org/graph/v1/paper/batch",
-            params={"fields": "abstract,externalIds"},
-            json={"ids": ["DOI:" + p["id"][4:] for p in chunk]},
-            timeout=90)
-        if resp.status_code != 200:                        # e.g. 429 = too many requests
-            print(f"Semantic Scholar answered {resp.status_code}; skipping it this week")
-            return
+        resp = ask("Semantic Scholar", "POST",
+                   "https://api.semanticscholar.org/graph/v1/paper/batch",
+                   params={"fields": "abstract,externalIds"},
+                   json={"ids": ["DOI:" + p["id"][4:] for p in chunk]})
+        if resp is None:
+            print("Semantic Scholar: skipping it this week")
+            return                                         # the reason is already in the log
         for paper, info in zip(chunk, resp.json()):        # answers come back in the same order
             if not info:
                 continue                                   # paper not in their database

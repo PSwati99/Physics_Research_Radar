@@ -3,7 +3,7 @@
 #  Edit this file to change what the weekly digest collects.
 # ==================================================================
 
-days_back: 14         # how many days back each run looks. 14 for the FIRST run only, then change to 7
+days_back: 7         # how many days back each run looks. 14 for the FIRST run only, then change to 7
 min_score: 6          # papers scoring below this are dropped (raise it for fewer, tighter results)
 featured_score: 30    # papers at or above this score, or by a watched author, become "top picks"
                       # (a paper's score adds up over ALL topics, so strong papers reach 30+)

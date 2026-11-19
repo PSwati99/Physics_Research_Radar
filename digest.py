@@ -399,6 +399,9 @@ def classify(paper):
         if score > 0:
             hits[topic] = (score, matched)
 
+    # Subjects you never want (the "exclude" list in topics.yaml) lower the score
+    penalty, excluded = topic_match(title, text, CONFIG.get("exclude") or {})
+
     authors = plain(paper["authors"])
     watched = [name for name in CONFIG.get("watch_authors", []) if plain(name) in authors]
     # Another researcher can share the same name (a "Yishu Wang" in medicine
@@ -409,7 +412,7 @@ def classify(paper):
     if not hits:
         watched = []
 
-    total = sum(s for s, _ in hits.values()) + (5 if watched else 0)
+    total = sum(s for s, _ in hits.values()) + (5 if watched else 0) - penalty
     if total < CONFIG["min_score"] and not watched:
         return None
 

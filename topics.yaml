@@ -4,8 +4,9 @@
 # ==================================================================
 
 days_back: 14         # how many days back each run looks. 14 for the FIRST run only, then change to 7
-min_score: 4          # papers scoring below this are dropped (raise it for fewer, tighter results)
-featured_score: 8     # papers at or above this score, or by a watched author, become "top picks"
+min_score: 6          # papers scoring below this are dropped (raise it for fewer, tighter results)
+featured_score: 30    # papers at or above this score, or by a watched author, become "top picks"
+                      # (a paper's score adds up over ALL topics, so strong papers reach 30+)
 max_per_topic: 20     # at most this many papers shown per topic each week
 contact_email: sswati1@vols.utk.edu   # sent to Crossref only, never shown on the website
 
@@ -83,13 +84,13 @@ topics:
     rejuvenation: 4
     replica symmetry: 4
     glassy dynamics: 3
-    memory effect: 3
+    memory effect: 2
     random field: 3
     random-field: 3
     dilute magnet: 3
     reentrant: 3
-    aging: 2
-    glassy: 2
+    aging: 1
+    glassy: 1
     frozen: 2
 
   Thermal Transport & Nonequilibrium Phenomena:
@@ -114,7 +115,7 @@ topics:
     rapid cooling: 3
     coarsening: 3
     ac susceptibility: 3
-    quench: 2
+    quench: 1
     nonequilibrium: 2
     non-equilibrium: 2
     out-of-equilibrium: 2
@@ -167,7 +168,7 @@ topics:
     exchange bias: 3
     interface anisotropy: 3
     ggg: 3
-    garnet: 2
+    garnet: 1
     heavy metal: 2
 
   Polarized Neutron Reflectometry:
@@ -179,7 +180,6 @@ topics:
     scattering length density: 4
     resonant x-ray reflectivity: 4
     refl1d: 4
-    pnr: 3
     x-ray reflectivity: 3
     x-ray reflectometry: 3
     xrr: 3
@@ -233,6 +233,7 @@ topics:
     neutron diffraction: 4
     polarized neutron: 4
     small-angle neutron: 4
+    small-angle scattering: 3
     neutron spectroscopy: 4
     triple-axis: 4
     spallation neutron source: 4
@@ -249,7 +250,7 @@ topics:
     magnetic structure: 2
     spin wave: 2
     magnetic excitation: 2
-    time-of-flight: 2
+    time-of-flight: 1
 
   Neutron Instrumentation & Detectors:
     neutron detector: 5
@@ -264,13 +265,13 @@ topics:
     boron-10: 4
     position-sensitive detector: 4
     mantid: 4
-    scintillator: 3
+    scintillator: 2
     neutron source: 3
     neutron imaging: 3
     monochromator: 3
     helium-3: 3
     data reduction: 3
-    beamline: 2
+    beamline: 1
     chopper: 2
     polarizer: 2
 
@@ -288,7 +289,7 @@ topics:
     sample environment: 4
     cryocooler: 4
     pulse tube: 4
-    cryogenic: 3
+    cryogenic: 2
     magnet system: 3
     pulsed magnetic field: 3
     pulsed field: 3
@@ -309,10 +310,10 @@ topics:
     autonomous experiment: 4
     self-driving lab: 4
     control system: 3
-    data acquisition: 3
+    data acquisition: 2
     lock-in amplifier: 3
-    fpga: 3
-    instrumentation: 2
+    fpga: 2
+    instrumentation: 1
     measurement setup: 2
     lock-in: 2
 
@@ -323,12 +324,12 @@ topics:
     pulsed laser deposition: 3
     depth profiling: 3
     thin film: 2
-    epitaxial: 2
+    epitaxial: 1
     sputter: 2
     magnetron: 2
-    heterostructure: 2
-    film thickness: 2
-    molecular beam epitaxy: 2
+    heterostructure: 1
+    film thickness: 1
+    molecular beam epitaxy: 1
     rheed: 2
     xps: 2
     x-ray photoelectron: 2
@@ -350,18 +351,18 @@ topics:
     reflectometry analysis: 4
     scattering length density: 4
     bayesian inference: 4
-    uncertainty quantification: 4
+    uncertainty quantification: 3
     markov chain monte carlo: 4
     mcmc: 4
-    parameter estimation: 4
+    parameter estimation: 3
     rietveld: 4
     model fitting: 4
     data fitting: 4
     data analysis: 3
     data reduction: 3
     least-squares: 3
-    inverse problem: 3
-    python package: 3
+    inverse problem: 2
+    python package: 2
     open-source software: 3
     modeling: 1
     modelling: 1
@@ -385,11 +386,11 @@ topics:
     micromagnetic: 3
     landau-lifshitz-gilbert: 3
     spin dynamics simulation: 3
-    molecular dynamics: 3
-    first-principles: 3
-    ab initio: 3
-    density functional: 2
-    dft: 2
+    molecular dynamics: 2
+    first-principles: 2
+    ab initio: 2
+    density functional: 1
+    dft: 1
     numerical simulation: 2
 
   Machine Learning & Bayesian Optimization:
@@ -399,10 +400,10 @@ topics:
     active learning: 5
     autonomous experiment: 5
     self-driving lab: 5
-    machine learning: 4
-    machine-learning: 4
-    deep learning: 4
-    neural network: 4
+    machine learning: 3
+    machine-learning: 3
+    deep learning: 3
+    neural network: 3
     reinforcement learning: 4
     surrogate model: 4
     physics-informed: 4
@@ -411,7 +412,7 @@ topics:
     generative model: 3
     autoencoder: 3
     random forest: 3
-    data-driven: 2
+    data-driven: 1
 
   # ---------------- Broader discovery ----------------
 
@@ -480,7 +481,7 @@ topics:
     topological surface state: 4
     berry curvature: 4
     anomalous hall: 4
-    dirac: 3
+    dirac: 2
     nodal line: 3
     band topology: 3
     spin-momentum locking: 3
@@ -488,7 +489,7 @@ topics:
     edge state: 3
     bi2se3: 3
     bi2te3: 3
-    topological: 2
+    topological: 1
 
   Novel Quantum Materials:
     altermagnet: 4
@@ -501,7 +502,31 @@ topics:
     moir: 1
     rare-earth: 1
 
-# Watched authors: their papers ALWAYS appear and become top picks.
+# Exclude: subjects you never want. Each match SUBTRACTS its weight from the
+# paper's score (title matches count double), so a paper that is mostly about
+# these drops out, while a strong match to your topics can still survive.
+exclude:
+  tokamak: 10
+  fusion plasma: 10
+  inertial confinement: 10
+  plasma diagnostic: 10
+  lattice qcd: 10
+  quarkonium: 10
+  collider: 10
+  neutrino: 10
+  dark matter: 10
+  gravitational wave: 10
+  cosmic ray: 10
+  battery: 5
+  electrocataly: 5
+  photocataly: 5
+  clinical: 10
+  patient: 10
+  tumor: 10
+
+# Watched authors: their papers become top picks and get a "Watched author" label,
+# as long as the paper also matches at least one keyword above (this blocks
+# other researchers who share the same name).
 # Matched against the author list ignoring capitals and accents.
 # To add someone: new line, two spaces, dash, space, then the name.
 watch_authors:

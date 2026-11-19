@@ -1,7 +1,7 @@
 {
  "date": "2026-11-19",
  "period": "2026-11-05 to 2026-11-19",
- "total": 309,
+ "total": 325,
  "topic_order": [
   "Spin Ice & Frustrated Magnetism",
   "Spin Glass & Disordered Magnetism",
@@ -2527,6 +2527,23 @@
     "featured": true
    },
    {
+    "id": "doi:10.1088/0953-8984/5/15/c01",
+    "title": "Erratum: A polarized neutron study of some Co 1-x Mn x alloys by A R Wildes, S J Kennedy, L D Cussen and T J Hicks ( J. Phys.: Condens. Matter 1992 4 8961\u20138968)",
+    "authors": "A R Wildes, S J Kennedy, L D Cussen, T J Hicks",
+    "abstract": "",
+    "source": "Journal of Physics: Condensed Matter",
+    "category": "",
+    "kind": "journal",
+    "url": "https://doi.org/10.1088/0953-8984/5/15/c01",
+    "published": "1993-04-12",
+    "score": 8,
+    "matched": [
+     "polarized neutron"
+    ],
+    "watched": [],
+    "featured": true
+   },
+   {
     "id": "arxiv:2611.21100",
     "title": "Design of nSPIRAL: a Neutron Spectrometric Position-Weighted Radial Array Long-Counter",
     "authors": "E. Mendoza, J. Guerrero-C\u00e1novas, D. Bachiller-Perea, C. Ballesteros, D. Cano-Ott, J. Garc\u00eda, J. Llanes Gamonoso, T. Mart\u00ednez, A. P\u00e9rez de Rada Fiol, J. Plaza, L. Romero, R. Santorelli, D. Villamar\u00edn, O. Alonso-Sa\u00f1udo, G. Au\u00f1\u00f3n, M. J. G. Borge, J. A. Briz, F. Calvi\u00f1o, G. Cort\u00e9s, A. De Blas, B. Fern\u00e1ndez, L. M. Fraile, G. Garc\u00eda, R. Garc\u00eda, V. Garc\u00eda-Tavora, C. Guerrero, A. Illana, N. Mont-Geli, V. Mart\u00ednez-Nouvilas, E. N\u00e1cher, A. Nerio-Aguirre, M. Pall\u00e0s, A. Perea, D. Soler, J. L. Ta\u00edn, A. Tarife\u00f1o-Saldivia, O. Tengblad, J. M. Ud\u00edas",
@@ -2617,58 +2634,65 @@
     "featured": false
    },
    {
-    "id": "arxiv:2611.24655",
-    "title": "Generation of neutron Bessel beams",
-    "authors": "Owen Lailey, Dusan Sarenac, Nir Emelianenko, Charles W. Clark, David G. Cory, Huseyin Ekinci, Michael G. Huber, Jeremy W. Paster, Anna Sokolova, Diego Alba Venero, Dmitry A. Pushin",
-    "abstract": "Matter waves can exhibit structured wavefields analogous to those of light, offering new means of controlling the spatial and angular-momentum degrees of freedom of massive particles. Bessel beams are a fundamental class of structured waves that exhibit non-diffracting propagation, self-healing, and well-defined orbital angular momentum (OAM). Here, we experimentally realize neutron Bessel beams by imprinting a nanoscale conical phase gradient onto a neutron wavefront. By incorporating azimuthal phase gradients, we generate zeroth-, third-, and sixth-order Bessel beams, demonstrating direct control of both the OAM and radial structure of a massive particle. We also propose a neutron Bessel-grating interferometer, complementary to established optical and electron interferometric methods, in which varying the radial grating period by approximately 100 nm yields a controlled Gouy phase shift of $\u03c0$. These results establish neutron Bessel beams as a new platform for diffractive neutron focusing and provide an experimental foundation for theoretical studies of Bessel beams in neutron scattering, decay, and OAM characterization.",
-    "source": "arXiv",
-    "category": "physics.app-ph",
-    "kind": "arxiv",
-    "url": "https://arxiv.org/abs/2611.24655v1",
-    "published": "2026-11-18",
-    "score": 4,
+    "id": "doi:10.1063/5.0350490",
+    "title": "Upgrades to the National Ignition Facility neutron time-of-flight diagnostic for operation at yields greater than 10 MJ",
+    "authors": "S. Kerr, K. D. Hahn, J. Jeet, M. Eckart, A. S. Moore, E. Mariscal, R. Hatarik, H. Khater, E. Henry, D. J. Schlossberg",
+    "abstract": "The National Ignition Facility (NIF) is reaching MJ fusion yields and has plans to reach tens of MJ. Diagnostic operation at these yields introduces challenges, from detector linearity at high signal levels to increased backgrounds. We present two upgrades to the NIF neutron time-of-flight (nToF) diagnostic suite that will enable measurements at high yields. First, silver neutron attenuators are being installed in the collimated nToF beamlines, reducing neutron flux and maintaining optimal signal-to-background levels. Silver was selected for its smooth neutron transmission cross section and sufficient \u03b3-ray transmission to retain the gamma peak used for hot-spot velocity measurements. Each line-of-sight will have four insertable silver pucks, providing \u223c2\u201320\u00d7 attenuation of 14 MeV neutrons. Second, microchannel plate (MCP) photomultiplier tubes using Zener diodes to establish constant MCP-to-anode acceleration voltages have been installed in the quartz Cherenkov detectors. These provide stable instrument response functions across large gain ranges and permit operation at MCP gains near unity. The combined upgrades will allow NIF nToFs to function at all projected future yields.",
+    "source": "Review of Scientific Instruments",
+    "category": "",
+    "kind": "journal",
+    "url": "https://doi.org/10.1063/5.0350490",
+    "published": "2026-11-01",
+    "score": 6,
     "matched": [
-     "neutron scattering"
+     "time-of-flight",
+     "beamline"
     ],
     "watched": [],
     "featured": false
    },
    {
-    "id": "doi:10.1103/44yd-vfgk",
-    "title": "Dipole-exchange spin waves and mode hybridization in magnetic nanoparticles",
-    "authors": "Fedor Shuklin, Khristina Albitskaya, Sergei Solovyov, Alexander Chernov, Mihail Petrov",
+    "id": "doi:10.1016/j.nima.2026.172243",
+    "title": "Design and characterization of neutron time-of-flight detector prototypes for heavy-ion collision experiments at CEE",
+    "authors": "Zhixuan He, Luobin Qin, Yuliang Shang, Yapeng Zhang, Zhoubo He, Xianglun Wei, Xiuling Zhang, Fang Fang, Duo Yan, Herun Yang, Yuhong Yu, Limin Duan, Zhiyu Sun",
     "abstract": "",
-    "source": "Physical Review B",
+    "source": "Nuclear Instruments and Methods in Physics Research Section A: Accelerators, Spectrometers, Detectors and Associated Equipment",
     "category": "",
     "kind": "journal",
-    "url": "https://doi.org/10.1103/44yd-vfgk",
-    "published": "2026-11-10",
+    "url": "https://doi.org/10.1016/j.nima.2026.172243",
+    "published": "2027-03",
     "score": 4,
     "matched": [
-     "spin wave"
-    ],
-    "watched": [],
-    "featured": false
-   },
-   {
-    "id": "doi:10.1103/674f-v4g4",
-    "title": "Evolution of magnetic structure from amplitude-modulated to N\u00e9el order in Ho 2 Re 3 Si 5",
-    "authors": "Vikash Sharma, Denis Sheptyakov, Anup Kumar Bera, A. Thamizhavel",
-    "abstract": "",
-    "source": "Physical Review B",
-    "category": "",
-    "kind": "journal",
-    "url": "https://doi.org/10.1103/674f-v4g4",
-    "published": "2026-11-10",
-    "score": 4,
-    "matched": [
-     "magnetic structure"
+     "time-of-flight"
     ],
     "watched": [],
     "featured": false
    }
   ],
   "Neutron Instrumentation & Detectors": [
+   {
+    "id": "doi:10.1088/1748-0221/21/11/p11006",
+    "title": "Shielding design and construction for the XINGZHI cold neutron triple-axis spectrometer: integrating velocity selector, S-bender polarizer, and neutron guide",
+    "authors": "Hongxia Zhang, Daye Xu, Florian Gr\u00fcnauer, Jinchen Wang, Yuntao Liu, Juanjuan Liu, Peng Cheng, Wei Bao",
+    "abstract": "The optimized design and construction of shielding for the velocity selector, S-bender polarizer, and neutron guide in the XINGZHI cold neutron triple-axis spectrometer have been successfully completed. The challenge of limited space available for XINGZHI has been met by a compact shielding structure, developed through Monte Carlo simulations and realized by purpose-built mechanical design, thus leaving more floor space for the spectrometer. An innovative lead-antimony alloy ensures rigidity for self-support, while optimized tolerances for gaps between mating blocks meet safety, machinability, and mounting requirements. Additionally, a long-distance alignment method has been implemented, facilitating the alternating installation of the neutron guide and shielding system. After six years of operation, this structure has been verified to meet radiation safety standards while maximizing available space, marking a significant advancement in neutron instrumentation in China and offering valuable methodologies for future development.",
+    "source": "Journal of Instrumentation",
+    "category": "",
+    "kind": "journal",
+    "url": "https://doi.org/10.1088/1748-0221/21/11/p11006",
+    "published": "2026-11-01",
+    "score": 35,
+    "matched": [
+     "triple-axis",
+     "neutron instrument",
+     "neutron guide",
+     "polarizer",
+     "instrumentation",
+     "monte carlo simulation",
+     "monte carlo"
+    ],
+    "watched": [],
+    "featured": true
+   },
    {
     "id": "arxiv:2611.20750",
     "title": "Scintillator-Based Event-Mode Neutron Imaging with Timepix4 Readout",
@@ -2782,6 +2806,91 @@
     "featured": true
    },
    {
+    "id": "doi:10.1016/j.nima.2026.172218",
+    "title": "3D-printing for particle detector assemblies: Material irradiation tests and structured plastic scintillators",
+    "authors": "Anja Bitar, Manuel B\u00f6hles, Volker B\u00fcscher, Philipp Kollar, Fabian Piermaier, Sebastian Ritter, Steffen Sch\u00f6nfelder, Lars Weinstock, Quirin Weitzel",
+    "abstract": "",
+    "source": "Nuclear Instruments and Methods in Physics Research Section A: Accelerators, Spectrometers, Detectors and Associated Equipment",
+    "category": "",
+    "kind": "journal",
+    "url": "https://doi.org/10.1016/j.nima.2026.172218",
+    "published": "2027-03",
+    "score": 6,
+    "matched": [
+     "scintillator"
+    ],
+    "watched": [],
+    "featured": false
+   },
+   {
+    "id": "doi:10.1016/j.nima.2026.172191",
+    "title": "Characteristics of a CeBr3 scintillator as an ion implantation detector used in \u03b2-decay studies of rare isotopes",
+    "authors": "T. Gaballah, B.P. Crider, S.N. Liddick, D.P. Scriven, R.S. Lubna, S. Ajayi, J.M. Allmond, A.D. Ayangeakaa, J.M. Berkman, A. Chester, S. Coil, A.A. Doetsch, H. Gadaria, R.V.F. Janssens, T.T. King, B. Longfellow, M.J. Mogannam, T.H. Ogunbeku, B. Olree, E.K. Ronning, A.E. Stuchbery, O.B. Tarasov, A. Tsantiri, S. Watters",
+    "abstract": "",
+    "source": "Nuclear Instruments and Methods in Physics Research Section A: Accelerators, Spectrometers, Detectors and Associated Equipment",
+    "category": "",
+    "kind": "journal",
+    "url": "https://doi.org/10.1016/j.nima.2026.172191",
+    "published": "2027-03",
+    "score": 6,
+    "matched": [
+     "scintillator"
+    ],
+    "watched": [],
+    "featured": false
+   },
+   {
+    "id": "doi:10.1063/5.0350270",
+    "title": "High-energy gamma-ray spectrometry with LYSO:Ce scintillators for fusion plasma experiments",
+    "authors": "S. Mianowski, P. Beaumont, M. Beldishevski, Z. Ghani, V. G. Kiptily, Z. Mianowska, B. Phoenix, A. Tilley",
+    "abstract": "High-performance gamma-ray spectrometry for fusion plasma diagnostics requires high detection efficiency in the MeV energy range, low pileup losses at high count rates, and an enhanced peak-to-background ratio. These requirements cannot be achieved simultaneously with a single large-volume scintillation detector. To address this limitation, a segmented detector consisting of a stack of three optically isolated lutetium\u2013yttrium oxyorthosilicate doped with cerium scintillation crystals with a silicon photomultiplier (SiPM) readout was developed and tested. Each crystal was equipped with an independent, synchronized readout channel and digitized using a high-speed waveform-acquisition system, enabling operation at count rates of 200 kcps per crystal. Energy was reconstructed using charge integration, whereas event timing was determined using constant-fraction discrimination to enable coincidence measurements. System performance was evaluated using a Ga-66 gamma-ray source that emits multiple lines at energies of up to 5 MeV. A proof-of-principle demonstration of pileup deconvolution was performed using a pattern-based algorithm applied to raw waveforms. The method enabled overlapping events to be identified and reconstructed at a count rate of \u223c200 kcps per scintillator. Coincidence selection identified a subset of events corresponding to \u223c21% of the 2752 keV full-energy peak counts observed in the individual detector spectra, providing additional information on correlated interactions within the segmented detector. The results demonstrate that detector segmentation, combined with coincidence techniques and pileup deconvolution, enables efficient high-count-rate gamma-ray spectrometry using SiPM-based detectors and offers a promising solution for fusion plasma diagnostics in high-magnetic-field environments.",
+    "source": "Review of Scientific Instruments",
+    "category": "",
+    "kind": "journal",
+    "url": "https://doi.org/10.1063/5.0350270",
+    "published": "2026-11-01",
+    "score": 6,
+    "matched": [
+     "scintillator"
+    ],
+    "watched": [],
+    "featured": false
+   },
+   {
+    "id": "doi:10.1088/1748-0221/21/11/c11004",
+    "title": "Development of pixelated scintillator arrays for the SMILE-3 project",
+    "authors": "Haruki Iiyama, Takeshi Nakamori, Dai Yaegashi, Shun Suzuki, Atsushi Takada, Shinya Sonoda, Mitsuru Abe, Hiroki Yoneda, Kai Matsunaga, Taiyo Sato, Soma Deguchi, Sana Okumura, Haruki Onoda, Tatsuya Sawano, Yusuke Munakata, Kanaho Okamoto, Yoshitaka Mizumura, Tomohiko Oka, Masaki Mori, Shunsuke Kurosawa, Junko Kushida, Kenji Hamaguchi, Kentaro Miuchi, Toru Tanimori",
+    "abstract": "The Sub-MeV/MeV gamma-ray Imaging Loaded-on-balloon Experiment 3 (SMILE-3) is a project for imaging observations in the MeV gamma-ray band using an electron-tracking Compton camera (ETCC). In this project, a balloon flight is planned in Australia in 2028. The ETCC consists of a gaseous time projection chamber and pixelated scintillator arrays (PSAs), which measure the energy and absorption position of scattered gamma rays. For SMILE-3, the PSAs have been redesigned to improve the energy resolution and extend the dynamic range compared with the PSA system used in the previous SMILE-2+ experiment. We developed a new readout system for the SMILE-3 PSAs and assembled flight-model PSA units. The assembled PSAs showed an average energy resolution of 8.67% at 662 keV. The low-gain readout showed a monotonic response up to approximately 6 MeV, indicating an extended dynamic range. These results show improvements in both energy resolution and dynamic range of the SMILE-3 PSAs.",
+    "source": "Journal of Instrumentation",
+    "category": "",
+    "kind": "journal",
+    "url": "https://doi.org/10.1088/1748-0221/21/11/c11004",
+    "published": "2026-11-01",
+    "score": 6,
+    "matched": [
+     "scintillator"
+    ],
+    "watched": [],
+    "featured": false
+   },
+   {
+    "id": "doi:10.1063/5.0354278",
+    "title": "Sub-100 meV low-energy inverse photoelectron spectroscopy using an electrostatic monochromator",
+    "authors": "Daichi Honma, Masaya Kai, Tomoko Onishi, Taichi Suruga, Issei Ishimori, Hayato Usami, Yuki Kashimoto, Toki Shimoda, Yuto Nishimoto, Harald Ibach, F. Stefan Tautz, Fran\u00e7ois C. Bocquet, Hiroyuki Yoshida",
+    "abstract": "We developed a high-resolution low-energy inverse photoelectron spectroscopy (LEIPS) system by integrating a low-energy electron source equipped with a 162\u00b0 electrostatic monochromator [H. Ibach et al., Rev. Sci. Instrum. 94, 043908 (2023)] into an angle-resolved LEIPS apparatus [Y. Kashimoto et al., Rev. Sci. Instrum. 94, 063903 (2023)]. Through the systematic optimization of the electron optics, pass energy, and photon detector, we achieved an overall energy resolution of 98 meV, surpassing the 0.1 eV milestone in inverse photoelectron spectroscopy. Even under throughput-optimized conditions, a resolution of 147 meV was obtained. Angle-resolved measurements on highly oriented pyrolytic graphite demonstrate its quantitative momentum-resolved capability.",
+    "source": "Review of Scientific Instruments",
+    "category": "",
+    "kind": "journal",
+    "url": "https://doi.org/10.1063/5.0354278",
+    "published": "2026-11-01",
+    "score": 6,
+    "matched": [
+     "monochromator"
+    ],
+    "watched": [],
+    "featured": false
+   },
+   {
     "id": "arxiv:2611.15820",
     "title": "Characterization of a Large-Area HRPPD MCP-PMT Coupled to LYSO for TOF-PET",
     "authors": "Yingjie Wang, Mark A. Popecki, Heejong Kim, Alexey V. Lyashenko, Stefan Cwik, Mythra Varun Nemallapudi, Jeffrey S. Souris, Michael J. Minot, Chien-Min Kao, Chin-Tu Chen",
@@ -2798,9 +2907,81 @@
     ],
     "watched": [],
     "featured": false
+   },
+   {
+    "id": "doi:10.1088/1748-0221/21/11/c11002",
+    "title": "Development of a positron imaging unit for advanced plant research",
+    "authors": "T. Ishiwatari, Y. Nagao, T. Yabe, M. Tsuda, H.G. Kang, E. Yoshida, T. Yamaya, T. Kamiya, M. Yamaguchi, N. Kawachi",
+    "abstract": "Positron-emitting tracer imaging systems (PETIS) apply the principles of positron emission tomography to plant research, enabling non-destructive, real-time visualization of substance distribution in living plants. However, the conventional PETIS instruments using bismuth germanate (BGO) scintillator arrays and position-sensitive photomultiplier tubes have limited spatial resolution 1.6\u20132.1 mm full width at half maximum (FWHM), and the relatively long decay time of BGO restricts the coincidence timing resolution (CTR) and count-rate performance. In addition, the thickness of the scintillator array can introduce parallax errors due to depth-of-interaction ambiguity. To enable submillimeter-scale imaging of fine structures like leaf veins, we developed a compact, high-resolution prototype PETIS unit tailored for thin plant organs. The prototype features two face-to-face detector modules separated by 2 cm. Each module consists of a finely segmented cerium-doped gadolinium aluminium gallium garnet scintillator array (1 \u00d7 1 \u00d7 1 and 1.5 \u00d7 1.5 \u00d7 1 mm 3 crystals), a 1-mm light guide, an 8 \u00d7 8 silicon photomultiplier array, and a TOFPET2 application-specific integrated circuit. The 1-mm-thick scintillator design drastically reduces depth-of-interaction parallax errors while optimizing count-rate capability. The performance was evaluated using a 22 Na point source. The system achieved 511 keV energy resolutions of 11\u201313 % FWHM. Reconstructed images demonstrated spatial resolutions of 1.1\u20131.2 mm FWHM, significantly outperforming the conventional PETIS instruments. The CTR reached 773 \u00b1 16 ps with an effective coincidence detection efficiency of 6.54 \u00d7 10 -5 . These fundamental performance results demonstrate the strong potential of the compact unit for localized, high-resolution plant transport studies.",
+    "source": "Journal of Instrumentation",
+    "category": "",
+    "kind": "journal",
+    "url": "https://doi.org/10.1088/1748-0221/21/11/c11002",
+    "published": "2026-11-01",
+    "score": 5,
+    "matched": [
+     "garnet",
+     "scintillator"
+    ],
+    "watched": [],
+    "featured": false
+   },
+   {
+    "id": "doi:10.1063/5.0350271",
+    "title": "Gamma-electron conversion on MERGS (magnetic electron recoil gamma-ray spectrometers) for fusion diagnostics",
+    "authors": "S. Huber, S. Mackie, J. H. Kunimune, E. Panontin, N. Fensterheim, J. E. Rice, R. A. Tinguely",
+    "abstract": "The spectral fingerprint of the radiation emitted by nuclear reactions in fusion experiments contains a wealth of information useful for improving the research and safety of fusion reactor design. In D/T fusion, the branching ratio of neutron emission greatly exceeds that of photon emission by around 5 orders of magnitude [Phys. Rev. Lett. 133, 055102 (2024)], drowning out the gamma ray signal for simpler detector systems, such as scintillators. Investigating novel gamma-ray spectrometers that can filter out these neutrons could prove useful. In this article, we investigate MERGS (Magnetic Electron Recoil Gamma-ray Spectrometer). A collimated neutron/gamma beam impinges upon a thin material in which the high energy photons scatter electrons, which are collimated again by an aperture further down the beamline, then redirected by magnetic optics onto an array of detectors, using the detection location to infer the energy of incident photons. Photon-electron conversion is simulated using a Monte-Carlo method that is explored in this article. Informed by potential future applications, we can place constraints on the design of the conversion material and apertures and can estimate their combined performance. We find that thicker foils offer higher efficiency at the cost of resolution, due to variable slowing dependent on electron scattering location. We find that higher Z conversion materials produce a broader recoil electron spectrum, reducing resolution, due to higher relative rate of pair-production. With these factors in mind, boron is the best non-hazardous element to achieve low noise and broadening. MERGS will enable measurements of gamma spectra from fusion reactors, facilitating safe development of the technology.",
+    "source": "Review of Scientific Instruments",
+    "category": "",
+    "kind": "journal",
+    "url": "https://doi.org/10.1063/5.0350271",
+    "published": "2026-11-01",
+    "score": 5,
+    "matched": [
+     "scintillator",
+     "beamline"
+    ],
+    "watched": [],
+    "featured": false
    }
   ],
   "Cryogenic Measurements & Instrumentation": [
+   {
+    "id": "doi:10.1063/5.0352375",
+    "title": "Cyclotron-frequency stability via single-ion fluorescence in a Penning trap with a cryogen-free superconducting magnet",
+    "authors": "A. Schupeta, D. Yousaf, M. Almagro, M. Hurtado, J. M. Palomino, J. Berrocal, M. Block, Ch. E. D\u00fcllmann, D. Rodr\u00edguez",
+    "abstract": "In this work, we investigate the magnetic-field stability of a Penning trap operated with a cryogen-free superconducting magnet through cyclotron-frequency measurements of a single laser-cooled calcium ion using two complementary photon-based detection techniques: a pulsed optical method for determining the three ion eigenfrequencies and Fluorescence-Detected Fourier-Transform Ion-Cyclotron-Resonance (FD-FT-ICR). For the former technique, the data-analysis procedure was revisited, considering it as the dominant contribution to the measurement uncertainty and yielding a long-term magnetic-field drift (1/B)(dB/dt) = \u22123.07(32) \u00d7 10\u22129 h\u22121. This value is comparable with those reported for high-precision Penning-trap experiments employing liquid-helium-based superconducting magnets. The short-term stability was investigated using the FD-FT-ICR technique, resulting in a minimum relative magnetic-field variation of \u03b4B/B \u2243 5 \u00d7 10\u22128 for averaging times between 30 and 60 s. Furthermore, this technique enables direct cyclotron-frequency determinations on timescales as short as a few seconds, providing access to magnetic-field fluctuations that are generally not resolved in conventional Penning-trap experiments.",
+    "source": "Review of Scientific Instruments",
+    "category": "",
+    "kind": "journal",
+    "url": "https://doi.org/10.1063/5.0352375",
+    "published": "2026-11-01",
+    "score": 16,
+    "matched": [
+     "cryogen-free",
+     "superconducting magnet"
+    ],
+    "watched": [],
+    "featured": true
+   },
+   {
+    "id": "doi:10.1088/1748-0221/21/11/p11016",
+    "title": "Design and parametric modal optimization of a low-vibration liquid-helium cryostat for a cryogenic current comparator",
+    "authors": "Jie Xie, Haiming Shao, Weibin Xi, Jipeng Fan, Qingqing Du, Changdong He",
+    "abstract": "To meet the requirements of cryogenic current comparators (CCCs) for stable cryogenic operation in precision large direct current measurement, a low-heat-load and low-vibration liquid-helium cryostat with an external helium reliquefier was designed and optimized. The cryostat provides a 4.2 K liquid-helium bath for the CCC. To reduce disturbances from the installation environment and reliquefier, a strategy combining global low-frequency isolation and internal high-frequency vibration avoidance was adopted. The isolation layer lowers the low-order modal frequencies of the global system, while enhanced support stiffness shifts internal modes away from the main disturbance bands. Based on the available cooling capacity and measured site vibration spectra, the design criteria were defined as a 4.2 K heat load below 0.54 W, global low-order modal frequencies below 20 Hz, and an internal control modal frequency above 50 Hz. A heat-load model for the 4.2 K stage and a thermally constrained modal design window were established. With lower axial and vertical support diameters of 12 mm and 10 mm, the 4.2 K heat load is 0.53 W, and the first horizontal and vertical modal frequencies are 59.55 Hz and 69.5 Hz. With the isolation layer, the first resonance peaks in three directions are 9.7 Hz, 9.5 Hz, and 14.7 Hz. Under measured floor excitation, the one-third-octave root-mean-square velocities at the CCC remain below the Vibration Criterion C limit of 12.5 \u03bcm/s. Strength and buckling evaluations confirm sufficient safety margins under normal and fault conditions. The results provide useful design data for high-precision CCC cryostats.",
+    "source": "Journal of Instrumentation",
+    "category": "",
+    "kind": "journal",
+    "url": "https://doi.org/10.1088/1748-0221/21/11/p11016",
+    "published": "2026-11-01",
+    "score": 14,
+    "matched": [
+     "cryostat",
+     "cryogenic"
+    ],
+    "watched": [],
+    "featured": true
+   },
    {
     "id": "arxiv:2611.22872",
     "title": "Cancellation of cryocooler-induced vibration in trapped-ion systems",
@@ -2888,6 +3069,42 @@
     "matched": [
      "cryogenic",
      "fpga"
+    ],
+    "watched": [],
+    "featured": true
+   },
+   {
+    "id": "doi:10.1063/5.0345291",
+    "title": "CHIMERA: Couette hydrodynamics for the investigation of multi-fluid extreme-Reynolds turbulence in annuli",
+    "authors": "Pantxo Diribarne, J\u00e9r\u00f4me Chartier, J\u00e9r\u00f4me Duplat, Bernard Rousset",
+    "abstract": "The Couette Hydrodynamics for the Investigation of Multi-fluid Extreme-Reynolds Turbulence in Annuli (CHIMERA) apparatus has been developed to investigate turbulent momentum transport in a canonical wall-driven flow using a wide variety of working fluids, from room-temperature gases to normal and superfluid helium. We present the design and characterization of a cryogenic Taylor\u2013Couette facility in which torque is measured on a suspended outer cylinder using a torsion-pendulum sensor and a non-contact optical readout. This configuration avoids the need for cryogenic torque transducers or electrical instrumentation inside the cryostat while providing high sensitivity over a wide dynamic range. Measurements performed in gaseous helium at room temperature and in normal liquid helium reach Reynolds numbers of up to 106 and agree well with established torque correlations, validating the apparatus over more than five decades in Reynolds number. Beyond providing such an exceptionally broad operating range with a single experimental facility and a single torque sensor, the principal motivation of CHIMERA is to enable direct comparisons of turbulent momentum transport in He I and He II under identical boundary conditions. By combining the same geometry and the same global torque diagnostic in both classical and quantum fluids, the apparatus provides a unique platform for investigating how wall-driven turbulence and its scaling evolve across the superfluid transition.",
+    "source": "Review of Scientific Instruments",
+    "category": "",
+    "kind": "journal",
+    "url": "https://doi.org/10.1063/5.0345291",
+    "published": "2026-11-01",
+    "score": 9,
+    "matched": [
+     "cryostat",
+     "cryogenic",
+     "instrumentation"
+    ],
+    "watched": [],
+    "featured": true
+   },
+   {
+    "id": "doi:10.1016/j.cryogenics.2026.104508",
+    "title": "Numerical and experimental investigation of a high-capacity free-piston Stirling cryocooler with a parallel regenerator array: 385 W at 80 K",
+    "authors": "Yuheng Zhang, Hangyu Ma, Guoyao Yu, Ying Ma, Haojie Sun, Shunmin Zhu, Ercang Luo",
+    "abstract": "",
+    "source": "Cryogenics",
+    "category": "",
+    "kind": "journal",
+    "url": "https://doi.org/10.1016/j.cryogenics.2026.104508",
+    "published": "2026-12",
+    "score": 8,
+    "matched": [
+     "cryocooler"
     ],
     "watched": [],
     "featured": true
@@ -2996,6 +3213,24 @@
     "featured": true
    },
    {
+    "id": "doi:10.1088/1748-0221/21/11/p11014",
+    "title": "DC cryogenic modeling of open-source SkyWater 130 nm MOSFETs at 77 K using BSIM4",
+    "authors": "F. Beall, A. Rimal, O. Seidel, Y. Mei, A.D. McDonald, I. Parmaksiz, V.A. Chirayath, J. Asaadi, D. Braga, J.B.R. Battat",
+    "abstract": "Cryogenic applications in high-energy physics (HEP) demand reliable, low-power CMOS electronics capable of operating at liquid nitrogen temperatures (77 K). The open-source SkyWater 130 nm (SKY130) CMOS process has previously been shown to operate at temperatures as low as 4 K making it a promising candidate for HEP applications. In this work, we characterize and model SKY130 low-threshold voltage transistors at 77 K, which is a temperature commonly used in modeling applications for liquid argon detectors. DC characteristic measurements were performed at both room temperature and liquid nitrogen temperature. We created a cryogenic modeling approach to produce a SPICE-compatible, isothermal BSIM4-based model for select transistor sizes at 77 K. The resulting model agrees with data at 77 K with an average error on the order of 20% (relative RMS). However, our models had a systematic overprediction specifically for the measured pMOS devices at the lowest measured drain bias. Due to the open-source nature of SKY130, we have made our models publicly available on Github. We hope this work will continue the trend for democratizing circuit design at cryogenic temperatures in high-energy physics by enabling open access to accurate CMOS device models at 77 K.",
+    "source": "Journal of Instrumentation",
+    "category": "",
+    "kind": "journal",
+    "url": "https://doi.org/10.1088/1748-0221/21/11/p11014",
+    "published": "2026-11-01",
+    "score": 8,
+    "matched": [
+     "cryogenic",
+     "modeling"
+    ],
+    "watched": [],
+    "featured": true
+   },
+   {
     "id": "arxiv:2611.18318",
     "title": "Quantized resistance limitations for graphene p-n junction devices",
     "authors": "Tamar M. Padwa, DaVonne Henry, Dominick S. Scaletta, Heather M. Hill, Antonio L. Levy, Dean G. Jarrett, David B. Newell, Albert F. Rigosi",
@@ -3010,6 +3245,23 @@
      "cryogenic",
      "epitaxial",
      "topological"
+    ],
+    "watched": [],
+    "featured": false
+   },
+   {
+    "id": "doi:10.1016/j.cryogenics.2026.104511",
+    "title": "Performance evolution of aged PTFE sealing gaskets used in cryogenic pipe valves",
+    "authors": "Aishuo Yang, Zhan Liu, Wenlong Xue, Jin Bai",
+    "abstract": "",
+    "source": "Cryogenics",
+    "category": "",
+    "kind": "journal",
+    "url": "https://doi.org/10.1016/j.cryogenics.2026.104511",
+    "published": "2026-12",
+    "score": 6,
+    "matched": [
+     "cryogenic"
     ],
     "watched": [],
     "featured": false
@@ -3047,115 +3299,44 @@
     ],
     "watched": [],
     "featured": false
-   },
-   {
-    "id": "arxiv:2611.21594",
-    "title": "Surrogate-Assisted Compact-Model Extraction for SKY130 CMOS at 77 K",
-    "authors": "Aaron Wang, Olivia Gzamouranis, Vaibhav Lohia, Hershel Fei Xun Weiner, Olivia Seidel, Richard Cavanaugh, Giuseppe Di Guglielmo, Nhan Tran, Davide Braga",
-    "abstract": "Cryogenic circuit design requires compact transistor models that reproduce measured low-temperature behavior and run in standard circuit simulators. We fit BSIM4 parameters to measured I-V curves of SkyWater 130 nm (SKY130) transistors at 77 K using a neural surrogate of NGSpice. The surrogate maps compact-model parameters and device geometry to the complete set of output and transfer characteristics. Extraction is a bounded least-squares search: a bank of NGSpice simulations supplies initial candidates, finite differences of the surrogate supply the local Jacobian, and NGSpice re-simulates the resulting cards before selection. On 18 measured geometries, we compare a search over seven card parameters with a search over 43 parameters selected by NGSpice sensitivity. Relative to NGSpice re-simulations of the previously released cards, the two searches reduce the in-sample mean relative root-mean-square error (RRMS) by 17% and 26%, respectively. The 43-parameter search has the lower overall error, but the seven-parameter search has the lower mean on high-bias curves, and some individual curves have higher error than with the released cards under both searches.",
-    "source": "arXiv",
-    "category": "physics.app-ph",
-    "kind": "arxiv",
-    "url": "https://arxiv.org/abs/2611.21594v1",
-    "published": "2026-11-16",
-    "score": 6,
-    "matched": [
-     "cryogenic",
-     "least-squares"
-    ],
-    "watched": [],
-    "featured": false
-   },
-   {
-    "id": "doi:10.1063/5.0351216",
-    "title": "Gateless 1T-DRAM for cryogenic memory applications",
-    "authors": "Seung-Bum Yim, Ki-Nam Park, Hyun-Jun Kang, Jun-Young Park, Sihyun Kim, Jaeyong Jeong, Joon-Kyu Han",
-    "abstract": "Cryogenic memory has emerged as a key technology for quantum-computing systems. In this Letter, a gateless one-transistor DRAM (1T-DRAM) operation is demonstrated at cryogenic temperatures. As the temperature decreases, the latch window expands from 0.26 V at 300 K to 2.26 V at 4 K, resulting in stable memory operation with a large sensing margin of 414 \u03bcA at 4 K. Suppressed Shockley\u2013Read\u2013Hall recombination at cryogenic temperatures improves static retention exceeding 500 s at 77 and 4 K, with dynamic retention exceeding 1000 s. These results demonstrate the potential of gateless 1T-DRAM for high-density cryogenic memory applications.",
-    "source": "Applied Physics Letters",
-    "category": "",
-    "kind": "journal",
-    "url": "https://doi.org/10.1063/5.0351216",
-    "published": "2026-11-09",
-    "score": 6,
-    "matched": [
-     "cryogenic"
-    ],
-    "watched": [],
-    "featured": false
-   },
-   {
-    "id": "doi:10.1063/5.0364088",
-    "title": "Erratum: \u201cControlling the recovery time of the superconducting nanowire single-photon detector with a voltage-controlled cryogenic tunable resistor\u201d [Appl. Phys. Lett. 127 , 212601 (2025)]",
-    "authors": "H. Wang, N. D. Orlov, N. Noordzij, T. Descamps, J. W. N. Los, V. Zwiller, I. Esmaeil Zadeh",
-    "abstract": "",
-    "source": "Applied Physics Letters",
-    "category": "",
-    "kind": "journal",
-    "url": "https://doi.org/10.1063/5.0364088",
-    "published": "2026-11-09",
-    "score": 6,
-    "matched": [
-     "cryogenic"
-    ],
-    "watched": [],
-    "featured": false
-   },
-   {
-    "id": "arxiv:2611.23479",
-    "title": "Graphene Transfer for Vertical Amorphous-Selenium Photodetectors: Fabrication, Optical Transmission and Operation at 77 K",
-    "authors": "I. Tzoka, M. Boukhicha, V. A. Chirayath, B. Brown, M. Rooks, M. Febbraro, S. Park, S. Abbaszadeh, K. Hellier, J. Asaadi, A. K. Rumaiz",
-    "abstract": "Graphene can serve as a VUV transparent electrode in vertical photodetector devices. Using an optically transparent graphene as a top-electrode of amorphous selenium (a-Se) photoconductor requires transfer process compatible with the thermal and chemical sensitivities of a-Se thin films. The baking and polymer-removal steps of conventional commercial Trivial Transfer graphene procedures are undesirable because heating can promote selenium crystallization and prolonged solvent exposure can cause delamination. We implement two alternatives: PMMA-free transfer of nominal 50-layer graphene and transfer of nominal 10-layer graphene using an approximately 80 nm PMMA support removed in acetone at 40C. Raman G and 2D bands identify graphene after transfer. Separate graphene/MgF2 specimens are characterized by dark-corrected transmission measurements over 120-325 nm and compared with earlier single-layer and nominal 6-8-layer Trivial Transfer spectra. The completed graphene/a-Se/Cr devices produce bias-dependent voltage transients under pulsed 415 nm illumination at 293 K and 77 K. These results establish an a-Se-compatible fabrication route for graphene-electrode devices and demonstrate vertical device operation at both room and cryogenic temperatures. The completed devices provide a platform for detection-efficiency studies, and direct VUV photoresponse measurements now underway.",
-    "source": "arXiv",
-    "category": "physics.ins-det",
-    "kind": "arxiv",
-    "url": "https://arxiv.org/abs/2611.23479v1",
-    "published": "2026-11-17",
-    "score": 5,
-    "matched": [
-     "cryogenic",
-     "thin film"
-    ],
-    "watched": [],
-    "featured": false
-   },
-   {
-    "id": "arxiv:2611.17976",
-    "title": "A Multiobjective Optimization Framework for Sensor Array Design in Magnetocardiography",
-    "authors": "Kesavaraja C, Sammita Kashyap, Korak Biswas, Pranab Dutta, Kushal Patel",
-    "abstract": "Magnetocardiography (MCG) noninvasively measures cardiac magnetic fields. Conventional cryogenic systems use fixed multichannel arrays, whereas room-temperature sensors enable flexible placement to reduce array size and measurement redundancy. The present study aims at developing a scheme to identify the optimal sensor placements by utilizing three methodological sensor optimization frameworks such as physics driven, experimental data driven and a hybrid combination of both. The physics-driven method optimizes continuous planar coordinates using D-optimality, spatial correlation, and leastsquares error. The data-driven method uses measured spatiotemporal fields and pole-geometry metrics, while the hybrid method integrates both approaches. The evaluation is performed using training objective, Pearson correlation, normalized root-meansquare error (NRMSE) and pole separation(mm), orientation(\u00b0) and trajectory(mm) errors, where physics-driven optimization identified 16 sensors with a correlation of 0.9914 and an NRMSE of 0.0139, with pole separation, orientation, and trajectory errors of 3.71 mm, 1.38\u00b0, and 3.55 mm, respectively. Data-driven optimization shows diminishing improvements beyond 17 sensors, achieving correlation 0.9840, NRMSE 0.0035, and pole errors of approximately 4.30 mm, 1.70\u00b0, and 6.80 mm. The hybrid method achieves correlation 0.9945 and NRMSE 0.0201 with 14 sensors, reducing sensor count by 12.5% relative to the physics-driven configuration. Its pole errors of 6.50 mm, 2.31\u00b0, and 7.50 mm satisfy the study-defined thresholds, balancing array compactness with magnetic-field morphology preservation. These results show that optimized placement helps alleviate the complexity of data redundancy and enhances the performance of MCG as a routine cost-effective clinical measurement.",
-    "source": "arXiv",
-    "category": "cond-mat.stat-mech",
-    "kind": "arxiv",
-    "url": "https://arxiv.org/abs/2611.17976v1",
-    "published": "2026-11-13",
-    "score": 5,
-    "matched": [
-     "cryogenic",
-     "data-driven"
-    ],
-    "watched": [],
-    "featured": false
-   },
-   {
-    "id": "arxiv:2611.14202",
-    "title": "Optical characterization of microcellular PET and crystallized PEN reflectors in liquid argon for LEGEND-1000",
-    "authors": "Marta Babicz, Laura Baudis, Andreas Leonhardt, Francesco Piastra, Lorenzo Pietropaoli, Stefan Sch\u00f6nert, Gloria Senatore, Esteban Tapia Pe\u00f1as, Tim van de Vendel",
-    "abstract": "Efficient collection of liquid argon (LAr) scintillation light is essential for background rejection in the LEGEND experiment. We investigate microcellular polyethylene terephthalate (PET) and crystallized polyethylene naphthalate (PEN) as candidate reflector materials for LEGEND-1000. Their optical responses to 450 nm light and 128 nm LAr scintillation are measured in LAr and complemented by room-temperature reflectance measurements in air. Under scintillation illumination, PET coupled to a PEN foil and crystallized PEN increase the detected photoelectron yield by factors of $2.36\\pm0.11$ and $1.75\\pm0.10$, respectively, relative to a black-metal-velvet reference. A Geant4-based optical model yields reflectivity estimates at $450~\\mathrm{nm}$ in LAr of $(90\\pm4)\\%$ for PET and $(81\\pm5)\\%$ for crystallized PEN, compared with $(80\\pm5)\\%$ for the Tetratex reference. These results motivate further investigation of both materials for LAr instrumentation, including their radiopurity, long-term cryogenic stability, and performance under matched detector conditions.",
-    "source": "arXiv",
-    "category": "physics.ins-det",
-    "kind": "arxiv",
-    "url": "https://arxiv.org/abs/2611.14202v1",
-    "published": "2026-11-10",
-    "score": 5,
-    "matched": [
-     "cryogenic",
-     "instrumentation"
-    ],
-    "watched": [],
-    "featured": false
    }
   ],
   "Scientific Instrumentation & Automation": [
+   {
+    "id": "doi:10.1088/1748-0221/21/11/p11013",
+    "title": "Real-time data acquisition and instrumentation framework for load frequency regulation in an islanded microgrid under energy storage failures with electric vehicle impacts",
+    "authors": "Sudipta Mitra, Nandiraju Venkata Srikanth",
+    "abstract": "This research presents a real-time instrumentation and data acquisition framework for load frequency regulation (LFR) in an islanded AC Microgrid (MG). A novel cascaded FOPTID-PTID controller with a noise-resilient derivative filtering technique has been proposed. The newly developed Chaos-Based Artificial Rabbits Optimization (CARO) algorithm has been used to fine-tune the controller parameters. The suggested technique successfully reduces frequency variations brought on by measurement noise, energy storage system (ESS) malfunctions, and uncertainty in renewable energy sources (RES). Additionally, the effect of EV integration on the LFR response under ESS failures and measurement noise has been examined. Sensitivity analysis is carried out under internal parametric uncertainties to evaluate the robustness of the controller. The performance of the system is tested using MATLAB/Simulink under different operating conditions. Real-time validation has been carried out using an OPAL-RT platform. The results confirm the effectiveness and practical feasibility of the proposed instrumentation and control framework.",
+    "source": "Journal of Instrumentation",
+    "category": "",
+    "kind": "journal",
+    "url": "https://doi.org/10.1088/1748-0221/21/11/p11013",
+    "published": "2026-11-01",
+    "score": 10,
+    "matched": [
+     "data acquisition",
+     "instrumentation"
+    ],
+    "watched": [],
+    "featured": true
+   },
+   {
+    "id": "doi:10.1016/j.nima.2026.172217",
+    "title": "From polling to proactive push: A low-latency event-driven architecture for distributed data acquisition",
+    "authors": "Rohan Milind Kadam, K. Hari Prasad, Saikat Das, Saiesh Khadpe, Prajwal Deshmukh",
+    "abstract": "",
+    "source": "Nuclear Instruments and Methods in Physics Research Section A: Accelerators, Spectrometers, Detectors and Associated Equipment",
+    "category": "",
+    "kind": "journal",
+    "url": "https://doi.org/10.1016/j.nima.2026.172217",
+    "published": "2027-03",
+    "score": 6,
+    "matched": [
+     "data acquisition"
+    ],
+    "watched": [],
+    "featured": false
+   },
    {
     "id": "arxiv:2611.11505",
     "title": "A 40 Gbit/s FPGA-based RoCEv2 transport for detector readout: development and performance",
@@ -3169,6 +3350,23 @@
     "score": 6,
     "matched": [
      "fpga"
+    ],
+    "watched": [],
+    "featured": false
+   },
+   {
+    "id": "doi:10.1063/5.0338267",
+    "title": "Nanosecond pulsed-current measurement based on current shunt and local data acquisition",
+    "authors": "Jinliang Liu, Tao Liang, Yi Chen, Yaru Mu, Feiteng Li, Xianglong Yuan, Xiaopan Shen, Zhiming Li",
+    "abstract": "This work presents a nanosecond pulsed-current measurement system based on a low-inductance current shunt combined with local data acquisition. A high-speed front-end sampling architecture and a fully shielded measurement configuration are implemented to suppress electromagnetic interference and maintain signal integrity. The frequency response of the shunt is characterized using vector network analyzer measurements and used to evaluate the effective bandwidth of the measurement system. A system-level uncertainty analysis is then performed by propagating the uncertainties associated with voltage measurement and variations in the measured transfer function. For I = 10 A and \u0394T = 50 \u00b0C, evaluated at 500 MHz, the deviation of the measured transfer impedance from the nominal shunt resistance dominates the uncertainty (\u224894%), resulting in a combined standard uncertainty of the reconstructed current of \u223c0.275 A at this condition. The corresponding \u00b13 dB bandwidth of the proposed shunt is 2.89 GHz. Experimental validation with a 3.5 ns pulsed-current generator based on a gas-switch electromagnetic pulse source shows that the measured waveform reproduces the pulse amplitude and the nanosecond rising edge of the current pulse. The proposed approach provides a practical method for broadband pulsed-current diagnostics and a quantitative framework for uncertainty evaluation in high-speed transient current measurements.",
+    "source": "Review of Scientific Instruments",
+    "category": "",
+    "kind": "journal",
+    "url": "https://doi.org/10.1063/5.0338267",
+    "published": "2026-11-01",
+    "score": 6,
+    "matched": [
+     "data acquisition"
     ],
     "watched": [],
     "featured": false
@@ -3207,6 +3405,24 @@
     ],
     "watched": [],
     "featured": false
+   },
+   {
+    "id": "doi:10.1063/5.0347874",
+    "title": "Design of a multifunctional Doppler backscattering diagnostic for the Pegasus-III experiment",
+    "authors": "E. Wikarta, U. Kumar, V. H. Hall-Chen, S. J. Diem, X. Li, K. T. E. Chua, T. S. P. See, A. C. Sontag, Z. Wilderspin",
+    "abstract": "The Doppler backscattering (DBS) diagnostic measures flows and electron density fluctuations. Recent work indicates that DBS can also infer the magnetic pitch angle [Yeoh et al., Nucl. Fusion 66, 016052 (2026)]. We present the preliminary design of a DBS for the Pegasus-III experiment. This DBS will serve two objectives. First, it will advance diagnostic science by supporting understanding of the DBS instrumentation functions, using DBS to constrain the magnetic equilibrium, and data-driven inference of plasma properties from DBS signals. Second, it will support Pegasus-III\u2019s research directions, such as solenoid-free plasma initiation and O\u2013X\u2013B mode conversion for heating and current drive, since density fluctuations can affect O\u2013X mode conversion efficiency, while magnetic pitch angle measurements can help constrain the optimum O\u2013X launch angle window. This ex-vacuum DBS system uses a single channel, tunable Ka-band source, a corrugated horn antenna, and a homodyne I/Q receiver with baseband digitization. For greater flexibility, which is especially important for pitch angle measurements, the quasi-optical elements include a rotatable spinner for O- and X-mode selection and a mirror with 2D steering. Using the Scotty beam-tracing code [Hall-Chen et al., Plasma Phys. Controlled Fusion 64, 095002 (2022)], we find that, for a range of poloidal launch angles of 8\u00b0\u201318\u00b0 and a corresponding toroidal launch angle between 0\u00b0 and 3\u00b0 for maximal backscattered DBS power, the DBS system is capable of measuring ion-scale density fluctuations 1 \u2272 |k\u22a5,c| \u2272 8 cm\u22121 at a range of normalized radial coordinates from the outer core (\u03c1 \u223c 0.65) to just beyond the last-closed flux surface (LCFS), where \u03c1 = 0 corresponds to the magnetic axis and \u03c1 = 1 corresponds to the LCFS. The system is also designed with additional toroidal steering capability, \u22124\u00b0 to 8\u00b0, to resolve the toroidal response needed for magnetic pitch angle measurements.",
+    "source": "Review of Scientific Instruments",
+    "category": "",
+    "kind": "journal",
+    "url": "https://doi.org/10.1063/5.0347874",
+    "published": "2026-11-01",
+    "score": 4,
+    "matched": [
+     "instrumentation",
+     "data-driven"
+    ],
+    "watched": [],
+    "featured": false
    }
   ],
   "Thin Films & Interface Characterization": [
@@ -3229,6 +3445,27 @@
      "molecular beam epitaxy",
      "surrogate model",
      "data-driven"
+    ],
+    "watched": [],
+    "featured": true
+   },
+   {
+    "id": "doi:10.1063/5.0355735",
+    "title": "An automated magnetron sputtering chamber for ferroelectric thin film deposition",
+    "authors": "Stanislav A. Udovenko, Ian Mercer, Minkyu Jung, Sarah Olandt, Ric Wilburn, Kevin Dressler, Susan Trolier-McKinstry, Jon-Paul Maria, Darren C. Pagan",
+    "abstract": "Optimization of next-generation materials synthesis and manufacturing processes can be accelerated by effective use of digital datasets. However, a majority of existing custom research infrastructure, including that for thin film deposition, is primarily manually operated and not compatible with this new research paradigm. Here, a template is provided for upgrading existing manual deposition chambers to enable automated and autonomous experimentation. As an example, the upgrade of an existing magnetron sputtering chamber dedicated to the synthesis of wurtzite ferroelectrics is presented. Focus is placed on automation of instrumentation; system and deposition control; and synchronized and automated data collection strategies. An example use case of the system for semi-autonomous determination of processing\u2013property relationships is presented, specifically, minimization of the coercive field in wurtzite Al1\u2212x\u2212yScxByN thin films.",
+    "source": "Review of Scientific Instruments",
+    "category": "",
+    "kind": "journal",
+    "url": "https://doi.org/10.1063/5.0355735",
+    "published": "2026-11-01",
+    "score": 23,
+    "matched": [
+     "autonomous experiment",
+     "instrumentation",
+     "thin film",
+     "sputter",
+     "magnetron"
     ],
     "watched": [],
     "featured": true
@@ -3429,6 +3666,26 @@
     "featured": true
    },
    {
+    "id": "doi:10.1063/5.0352364",
+    "title": "Wafer-level growth of p4 mm -textured BaTiO3 films on SiO2-on-Si substrates by RF magnetron sputtering",
+    "authors": "Ruyuan Ma, Mingliang Zhao, Yuqi Shi, Wentao Yan, Yang Qiu, Xingyan Zhao, Shaonan Zheng, Qize Zhong, Yuan Dong, Ting Hu",
+    "abstract": "Integrating barium titanate (BTO) films on SiO2/Si-based platforms is essential for the development of future nanophotonic modulators in photonic integrated circuits (PIC). However, the integration of BTO films on these amorphous platforms is far from trivial. In this work, the direct growth of tetragonal crystal (p4 mm)-textured BTO films on 4-in. SiO2/Si using a magnesium oxide (MgO) buffer layer by a magnetron sputtering process is developed. This work presents a systematic study on the evolution of crystallographic orientation and anisotropy energy in BTO films as a function of film thickness. Furthermore, a detailed analysis is conducted on the growth kinetics of BTO films, with the thickness-dependent evolution of surface morphology and Ba/Ti. Simultaneously, strain-engineered BTO films with a Curie temperature (Tc &gt; 360 \u00b0C) are demonstrated. This integration method overcomes the lattice matching limitation between BTO and the amorphous substrate, offering a low-cost, flexible integration approach for next-generation PIC platforms.",
+    "source": "Applied Physics Letters",
+    "category": "",
+    "kind": "journal",
+    "url": "https://doi.org/10.1063/5.0352364",
+    "published": "2026-11-02",
+    "score": 11,
+    "matched": [
+     "sputter",
+     "magnetron",
+     "film thickness",
+     "strain"
+    ],
+    "watched": [],
+    "featured": true
+   },
+   {
     "id": "arxiv:2611.17986",
     "title": "Epitaxial integration of GaN $\u03bc$-platelets and thin films on metallic TiN using a hybrid approach",
     "authors": "Philipp M. John, Thomas Auzelle, Pierre-Marie Coulon, Blandine Alloing, Ileana Florea, Mikel G\u00f3mez Ruiz, Jonas L\u00e4hnemann, Lutz Geelhaar, Oliver Brandt",
@@ -3526,6 +3783,24 @@
     "featured": true
    },
    {
+    "id": "doi:10.1016/j.nima.2026.172219",
+    "title": "Development of an in-situ magnetron sputtering plasma monitoring setup",
+    "authors": "Burak Bilki, Mehmet Tosun, Sena Acikgoz",
+    "abstract": "",
+    "source": "Nuclear Instruments and Methods in Physics Research Section A: Accelerators, Spectrometers, Detectors and Associated Equipment",
+    "category": "",
+    "kind": "journal",
+    "url": "https://doi.org/10.1016/j.nima.2026.172219",
+    "published": "2027-03",
+    "score": 8,
+    "matched": [
+     "sputter",
+     "magnetron"
+    ],
+    "watched": [],
+    "featured": true
+   },
+   {
     "id": "doi:10.1103/kv71-knpq",
     "title": "Modeling strained Cd 3 As 2 thin films and their behavior in magnetic fields",
     "authors": "M. Smith, A. A. Burkov, P. P. Orth, I. Martin, Victor L. Quito",
@@ -3561,64 +3836,52 @@
     ],
     "watched": [],
     "featured": true
-   },
-   {
-    "id": "arxiv:2611.22529",
-    "title": "Solvent/Antisolvent-Driven Etching of 2D Layered Halide Perovskite Microcrystals toward Endo-Epitaxial Heterostructures",
-    "authors": "Ajeet Singh, Sudhir Kumar Saini, Hriday Kumar Pal, Cara Elisabeth Bradsher, Sirous Khabbaz Abkenar, Roman Krahne, Liberato Manna",
-    "abstract": "Engineering internal interfaces within single crystals remains challenging, particularly in soft ionic materials such as layered halide perovskites (LHPs), for which conventional lithographic approaches are difficult to implement. Here we report a solvent/antisolvent-driven strategy for controlled etching of LHP microcrystals, producing well-defined rectangular cavities. Etching initiates at the top surface and proceeds preferentially along the crystallographic [100] and [010] directions. Cavity dimensions are tuned through etching time, temperature and etchant composition. The reaction can be interrupted and resumed, enabling stepwise cavity evolution through successive etching cycles. The resulting cavities serve as confined templates for regrowth of compositionally distinct LHPs, yielding endo-epitaxial heterostructures with designed internal architectures. The approach extends across diverse LHP compositions and antisolvent systems, while sequential precursor addition controls the extent of internal regrowth. This strategy establishes a route to engineering internal heterointerfaces in single-crystal perovskites through controlled chemical etching and confined growth.",
-    "source": "arXiv",
-    "category": "cond-mat.mtrl-sci",
-    "kind": "arxiv",
-    "url": "https://arxiv.org/abs/2611.22529v1",
-    "published": "2026-11-17",
-    "score": 8,
-    "matched": [
-     "epitaxial",
-     "heterostructure"
-    ],
-    "watched": [],
-    "featured": true
-   },
-   {
-    "id": "doi:10.1063/5.0354930",
-    "title": "Shubnikov\u2013de Haas characterization of superconductor\u2013semiconductor heterostructures",
-    "authors": "A. M. Zimmerman, Saeed Fallahi, Sergei Gronin, Tyler Lindemann, Patrick Sohr, Ray Kallaher, Alejandro Alcaraz Ramirez, Georg W. Winkler, Samuel M. L. Teicher, William Cole, Sebastian Heedt, Eoin O'Farrell, Gijs de Lange, Roman Lutchyn, Michael J. Manfra, John Watson",
-    "abstract": "Hybrid superconductor\u2013semiconductor nanostructures are a central component for research spanning condensed matter physics and quantum information processing. Continued progress relies critically on the ability to characterize, control, and optimize several intrinsic material properties, including spin\u2013orbit coupling, band offsets, and disorder, in a device-relevant stack that necessarily couples the electronic states of a superconducting metal film and a semiconductor. Here, we report a new method to extract fundamental material parameters utilizing simple Shubnikov\u2013de Haas oscillation measurements in heterostructures in which metallic electronic states are coupled to a two-dimensional electron gas (2DEG) residing in an InAs quantum well beneath an aluminum thin film. Proper analysis of the full magnetoresistance data facilitates extraction of the quantum well carrier density, spin\u2013orbit coupling strength, and both transport and quantum scattering times. Most importantly, the extracted scattering times in the 2DEG are impacted by the metal\u2013semiconductor coupling strength, allowing us to quickly measure an upper bound for superconductor\u2013semiconductor coupling without any fabrication or mK measurements. The wealth of information that is accessed with these simple measurements positions this methodology as an important tool for hybrid materials optimization.",
-    "source": "Applied Physics Letters",
-    "category": "",
-    "kind": "journal",
-    "url": "https://doi.org/10.1063/5.0354930",
-    "published": "2026-11-16",
-    "score": 8,
-    "matched": [
-     "magnetoresistance",
-     "thin film",
-     "heterostructure"
-    ],
-    "watched": [],
-    "featured": true
-   },
-   {
-    "id": "doi:10.1103/zstn-z151",
-    "title": "Cladding-free topological plasmonic waveguides in metasurface heterostructures",
-    "authors": "Sitian Wan, Bo Hu, Yikai Xu, Shaojie Ma, Lei Zhou",
-    "abstract": "",
-    "source": "Physical Review Letters",
-    "category": "",
-    "kind": "journal",
-    "url": "https://doi.org/10.1103/zstn-z151",
-    "published": "2026-11-13",
-    "score": 8,
-    "matched": [
-     "heterostructure",
-     "topological"
-    ],
-    "watched": [],
-    "featured": true
    }
   ],
   "Scientific Modeling & Data Analysis": [
+   {
+    "id": "doi:10.1063/5.0350897",
+    "title": "Bayesian inference of burn history metrics measured with the particle time of flight (PTOF) detector at the National Ignition Facility",
+    "authors": "Y. Lawrence, E. Edwards, C. W. Wink, T. E. Evans, B. L. Reichelt, N. Izumi, S. Palaniyappan, G. D. Sutcliffe, E. Mariscal, T. Nguyen, D. Schlossberg, R. D. Petrasso, M. Gatu Johnson, C. K. Li, J. A. Frenje",
+    "abstract": "The particle time-of-flight (PTOF) detector is a chemical vapor deposition diamond detector used on low yield shots (\u22721015 neutrons) at the National Ignition Facility (NIF) to measure the time of peak nuclear emission. Burn widths and burn histories can also be measured if the detector response is sufficiently fast compared to the burn width. Standard analysis techniques use maximum-likelihood-based forward fits or deconvolution techniques. While generally sufficient, it can be difficult to rigorously quantify all chosen sources of uncertainty, and for burn history measurements, deconvolution methods are limited by measurement noise, making rigorous uncertainty quantification challenging. Here, a Bayesian inference framework with Markov chain Monte Carlo sampling is described and applied to several NIF experiments to highlight its benefits. These include rigorous error quantification for all analyzed signals, clearer interpretation of relatively complex PTOF signals such as those with overlapping particle arrival histories, and inference of nuclear burn histories.",
+    "source": "Review of Scientific Instruments",
+    "category": "",
+    "kind": "journal",
+    "url": "https://doi.org/10.1063/5.0350897",
+    "published": "2026-11-01",
+    "score": 28,
+    "matched": [
+     "time-of-flight",
+     "bayesian inference",
+     "uncertainty quantification",
+     "markov chain monte carlo",
+     "monte carlo",
+     "bayesian"
+    ],
+    "watched": [],
+    "featured": true
+   },
+   {
+    "id": "doi:10.1107/s1600576726009180",
+    "title": "SAS_MoCa : software for small-angle scattering data analysis of large unilamellar vesicles",
+    "authors": "Enrico F. Semeraro, Georg Pabst",
+    "abstract": "Small-angle X-ray or neutron scattering (SAXS/SANS) analysis of large unilamellar vesicles (LUVs) is often limited by high-dimensional bilayer models and the lack of dedicated, statistically rigorous workflows. Here, we introduce SAS_MoCa , an open-source Python package that integrates a compositional scattering density profile (SDP) description of lipid bilayers with a separated form factor (SFF) treatment of vesicle size and polydispersity, and couples these highly parameterized models to an adaptive thermodynamic simulated annealing algorithm formulated within a constrained Bayesian framework. SAS_MoCa enables users to incorporate quantitative prior information from, e.g. , previous SAXS/SANS studies, dynamic light scattering, NMR or molecular simulations, and returns full posterior parameter distributions, uncertainties (reported as medians and median absolute deviations) and correlations even from single SAXS curves. Validation on SAXS-only data of LUVs of varying compositions demonstrates that the method yields reproducible structural parameters with uncertainties comparable to those from joint SAXS/contrast-variation SANS analyses. The modular architecture of SAS_MoCa facilitates extension to additional lipid systems and future joint SAXS/SANS or SANS-only applications.",
+    "source": "Journal of Applied Crystallography",
+    "category": "",
+    "kind": "journal",
+    "url": "https://doi.org/10.1107/s1600576726009180",
+    "published": "2026-11-04",
+    "score": 18,
+    "matched": [
+     "neutron scattering",
+     "sans",
+     "data analysis",
+     "python package",
+     "bayesian"
+    ],
+    "watched": [],
+    "featured": true
+   },
    {
     "id": "arxiv:2611.14782",
     "title": "Bayesian inference with a polymer probabilistic computer",
@@ -3633,6 +3896,26 @@
     "matched": [
      "bayesian inference",
      "bayesian"
+    ],
+    "watched": [],
+    "featured": true
+   },
+   {
+    "id": "doi:10.1063/5.0348515",
+    "title": "Digital least-squares amplitude detection for high-speed atomic force microscopy",
+    "authors": "Suresh Babu Lavanya, Yi-Chih Lin",
+    "abstract": "High-speed atomic force microscopy (HS-AFM) in amplitude-modulated (tapping) mode requires rapid and reliable amplitude detection for real-time feedback control. Here, we develop a low-latency field-programmable gate array (FPGA)-based digital least-squares (LSQ) amplitude detector for HS-AFM operation. Although LSQ is a well-established signal-processing method, the novelty of this work lies in its implementation as a high-frequency, microsecond-response amplitude detector for real-time HS-AFM feedback. To enable real-time operation, we implemented a two-parameter LSQ formulation on FPGA hardware, in which the adjustable fitting-window length defines the number of sampled points used for each amplitude estimate. We evaluated LSQ using numerical simulations, signal-generator measurements, HS-AFM deflection-signal analysis, and biological HS-AFM imaging. Under matched response-time conditions, numerical simulations showed that LSQ produced amplitude-estimate fluctuations comparable to Fourier-amplitude-based detection and lower than those produced by sample-and-hold-based detection (SHB) and phase-shift-based detection. Experimental measurements further showed that shorter LSQ windows provided SHB-like response times, whereas longer windows reduced amplitude-estimate fluctuations. LSQ also supported stable HS-AFM imaging of annexin-V lattices on supported lipid bilayers. These results establish digital LSQ as an additional amplitude-detection strategy for HS-AFM, particularly for applications involving noisy cantilever deflection signals where tunable control of the response-time/amplitude-fluctuation trade-off is needed.",
+    "source": "Review of Scientific Instruments",
+    "category": "",
+    "kind": "journal",
+    "url": "https://doi.org/10.1063/5.0348515",
+    "published": "2026-11-01",
+    "score": 13,
+    "matched": [
+     "fpga",
+     "atomic force microscopy",
+     "least-squares",
+     "numerical simulation"
     ],
     "watched": [],
     "featured": true
@@ -3671,6 +3954,25 @@
      "inverse problem",
      "python package",
      "open-source software"
+    ],
+    "watched": [],
+    "featured": true
+   },
+   {
+    "id": "doi:10.1063/5.0350705",
+    "title": "Particle transport studies using gas puff modulation and multi-channel heterodyne interferometry in the Helically Symmetric eXperiment",
+    "authors": "D. Damaskopoulos, H. O. M. Hillebrecht, G. Tryfonos, M. D. Nornberg, W. R. Goodman, B. Geiger",
+    "abstract": "Understanding and controlling particle transport in future power plants is critical, as peaked density profiles are needed for high-density operation and reduced turbulent heat fluxes. Here, we determine particle transport coefficients in density-modulation experiments on the Helically Symmetric eXperiment stellarator, using a multi-channel heterodyne interferometer (IF) and a multi-profile Thomson Scattering (TS) diagnostic. We perform parameter fitting with Bayesian inference and the pySTRAHL code to forward-model densities. Fitting is done with three routines: an IF-only, a TS-only, and an integrated data analysis (IDA) routine. Fitting with the IF yields peaked density profiles with diffusion values \u22482.5m2/s over much of the mid-radius and inward convection (V &lt; 0), ranging from \u221210 to \u221250 m/s. The TS routine constrains the density profile shape and reveals minor core hollowing, but does not constrain its magnitude or distinguish transport coefficients. The IDA fit yields small core diffusion (D \u2248 0.01 m2/s) limited by the bounds of the prior distribution and increases toward the edge, approaching Bohm-scaling values. Small outward convection in the core suggests minor hollowing. Between 0.1 \u2272 r/a \u2272 0.85, an inward pinch is observed, which then flips outward at r/a \u2248 0.85 with large uncertainty bands throughout. The hollowing in the TS-only and IDA fits conflicts with the peaked profiles suggested by the IF. These results highlight modulation studies, combined with fast density measurements, as a tool for studying diffusive and convective particle transport in the Helically Symmetric eXperiment.",
+    "source": "Review of Scientific Instruments",
+    "category": "",
+    "kind": "journal",
+    "url": "https://doi.org/10.1063/5.0350705",
+    "published": "2026-11-01",
+    "score": 10,
+    "matched": [
+     "bayesian inference",
+     "data analysis",
+     "bayesian"
     ],
     "watched": [],
     "featured": true
@@ -4579,6 +4881,24 @@
     "featured": true
    },
    {
+    "id": "doi:10.1088/1748-0221/21/11/p11020",
+    "title": "Bayesian optimization of the relativistic heavy ion collider luminosity via s * control",
+    "authors": "Xiaofeng Gu, Benjamin Coe, Guillaume Robert-Demolaize, Takeshi Kanesue, Masahiro Okamura, William Fung, Yue Hao, Ji Qiang, Xiaoye S. Li, Yang Liu",
+    "abstract": "In order to aid in luminosity maximization at the interaction point (IP), the collision location s IP must be equivalent to the location of the minimum value of the beta function s *. Accurate optics measurements and s * movements are therefore essential to luminosity optimization. However, according to current Relativistic Heavy Ion Collider (RHIC) operations measurements, average horizontal beta beat measurements between operating IPs are around 20% along with significant variation in s * measurements. Precise control of the longitudinal beam waist position ( s *) has become a critical yet challenging knob for maximizing the luminosity of modern high-energy colliders, particularly with short bunch lengths and high crossing angles. We present the online application of Bayesian optimization (BO) using the GPTune framework to systematically tune sPHENIX luminosity via s * control at the Relativistic Heavy Ion Collider (RHIC). The GPTune framework was first validated at the RHIC Electron Beam Ion Source (EBIS), where it delivered up to a 70% increase in beam intensity over the baseline, although experienced operators could also achieve this performance with longer manual tuning. The framework was then deployed during sPHENIX operations at RHIC. Using an intensity-normalized Zero-Degree-Calorimeter (ZDC) signal as the objective (owing to the unavailability of the live sPHENIX MVTX signal), GPTune successfully identified local luminosity maxima, recovered from intentionally degraded s * configurations, and uncovered residual horizontal and vertical waist offsets in the interaction region. These results demonstrate the robustness and efficiency of Bayesian optimization for real-time collider tuning under noisy and time-varying conditions. The developed methodology with s * control provides a powerful new tool for precision luminosity optimization and will be especially valuable for next-generation short-bunch colliders such as the Electron-Ion Collider (EIC).",
+    "source": "Journal of Instrumentation",
+    "category": "",
+    "kind": "journal",
+    "url": "https://doi.org/10.1088/1748-0221/21/11/p11020",
+    "published": "2026-11-01",
+    "score": 16,
+    "matched": [
+     "bayesian optimization",
+     "bayesian"
+    ],
+    "watched": [],
+    "featured": true
+   },
+   {
     "id": "doi:10.1103/qcvb-y84n",
     "title": "Bridging surface dynamics and phase transitions in CsPbI 3 perovskite with machine-learning force fields and dispersion interactions",
     "authors": "Iryna Knysh, Anton Charkin-Gorbulin, Claudio Quarti, David Beljonne, Igor Poltavsky, Alexandre Tkatchenko",
@@ -4633,28 +4953,6 @@
      "density functional",
      "dft",
      "data-driven"
-    ],
-    "watched": [],
-    "featured": true
-   },
-   {
-    "id": "arxiv:2611.10853",
-    "title": "A Geometry-Guided Feature-Space Framework for Interpretable Unsupervised 4D-STEM Analysis of Complex Multiphase Materials",
-    "authors": "Arda Genc, Daniel A. Bolden, Albert Nguyen, Daniel S. Gianola, Ravit Silverstein",
-    "abstract": "Rapid, high-fidelity analysis of four-dimensional scanning transmission electron microscopy (4D-STEM) datasets from heterogeneous materials remains challenging because coexisting phases, orientation variants, local strain gradients, and intrinsic TEM thin-foil effects produce complex, overlapping diffraction signatures. Here, we present a machine-learning (ML) framework that combines physics-informed geometric descriptors with weighted high-dimensional embeddings to identify latent structural patterns with minimal prior knowledge. By constructing a regularized descriptor space before embedding and density-based clustering, the method improves cluster stability, suppresses noise-driven fragmentation, and reduces sensitivity to embedding hyperparameters. Spatial weighting produced the largest stability gain, increasing median cluster persistence from 0.04 to 0.55 while reducing the noise fraction from approximately 22% to 0%. Rotation weighting increased DBCV from 0.80 to 0.92, although the noise fraction rose from 0.2% to 1.0%, highlighting a trade-off between improved density separation and noise rejection. We validate the framework on two benchmark systems: Si/Si$_x$Ge$_{1-x}$ epitaxial layers with continuous lattice variation and deformation, and multiphase Ti-Nb alloys containing distinct phases and orientation variants. Comparisons with a pretrained vanilla autoencoder and model-free pattern vectorization show that the physics-informed geometric descriptor provides higher cluster fidelity, greater interpretability, and substantially lower dimensionality.",
-    "source": "arXiv",
-    "category": "cond-mat.mtrl-sci",
-    "kind": "arxiv",
-    "url": "https://arxiv.org/abs/2611.10853v1",
-    "published": "2026-11-07",
-    "score": 15,
-    "matched": [
-     "epitaxial",
-     "strain",
-     "transmission electron microscopy",
-     "machine-learning",
-     "physics-informed",
-     "autoencoder"
     ],
     "watched": [],
     "featured": true
@@ -5368,6 +5666,24 @@
     "featured": true
    },
    {
+    "id": "doi:10.1016/j.jmmm.2026.174764",
+    "title": "Magnetic susceptibility of effective two-level systems: Insights from a Heisenberg isosceles triangle",
+    "authors": "Katar\u00edna Karl\u2019ov\u00e1, Jozef Stre\u010dka",
+    "abstract": "",
+    "source": "Journal of Magnetism and Magnetic Materials",
+    "category": "",
+    "kind": "journal",
+    "url": "https://doi.org/10.1016/j.jmmm.2026.174764",
+    "published": "2027-01",
+    "score": 12,
+    "matched": [
+     "magnetic susceptibility",
+     "susceptibility"
+    ],
+    "watched": [],
+    "featured": true
+   },
+   {
     "id": "arxiv:2611.17166",
     "title": "The de Haas--van Alphen effect in a two-dimensional nematic Fermi fluid",
     "authors": "Lu\u00eds E. Leite Mac\u00eado, Daniel G. Barci",
@@ -5451,23 +5767,6 @@
     "score": 10,
     "matched": [
      "quantum sensor"
-    ],
-    "watched": [],
-    "featured": true
-   },
-   {
-    "id": "doi:10.1103/2r9y-xfmb",
-    "title": "Photoelectrical readout and Ramsey interferometry of single shallowly implanted NV centers in diamond",
-    "authors": "Ilia Chuprina, Christoph Findler, Johannes Lang, Petr Siyushev, Fedor Jelezko",
-    "abstract": "",
-    "source": "Physical Review Research",
-    "category": "",
-    "kind": "journal",
-    "url": "https://doi.org/10.1103/2r9y-xfmb",
-    "published": "2026-11-16",
-    "score": 10,
-    "matched": [
-     "nv center"
     ],
     "watched": [],
     "featured": true

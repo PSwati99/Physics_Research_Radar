@@ -77,24 +77,43 @@ def crossref_date(item):
     return "-".join(f"{p:04d}" if i == 0 else f"{p:02d}" for i, p in enumerate(parts))
 
 
+PAGE_SIZE = 1000      # Crossref's maximum number of papers per request
+MAX_PAGES = 10        # safety stop: never ask for more than 10 pages (10,000 papers)
+
+
 def fetch_journals():
-    """Recent papers from every journal in topics.yaml, in one Crossref call."""
+    """Recent papers from every journal in topics.yaml, via the Crossref API.
+
+    Crossref returns at most 1000 papers per request, so we ask page by page.
+    Each answer includes a "next-cursor" bookmark; sending it back gives the
+    next page. We stop when a page comes back short (that was the last one).
+    """
     filters = [f"from-pub-date:{START}", f"until-pub-date:{TODAY}"]
     filters += [f"issn:{issn}" for issn in CONFIG["journals"].values()]  # ISSNs are OR-ed
     params = {
         "filter": ",".join(filters),
-        "rows": 1000,
+        "rows": PAGE_SIZE,
         "select": "DOI,title,abstract,author,container-title,URL,published,issued",
+        "cursor": "*",                    # "*" means: start at the first page
     }
     headers = {"User-Agent": f"paper-digest (mailto:{CONFIG['contact_email']})"}
-    msg = requests.get("https://api.crossref.org/works", params=params,
-                       headers=headers, timeout=90).json()["message"]
 
-    if msg["total-results"] > 1000:
-        print(f"Warning: {msg['total-results']} journal papers, only first 1000 scored")
+    items = []
+    for page in range(1, MAX_PAGES + 1):
+        msg = requests.get("https://api.crossref.org/works", params=params,
+                           headers=headers, timeout=90).json()["message"]
+        items += msg["items"]
+        print(f"Crossref page {page}: {len(msg['items'])} papers "
+              f"({len(items)} of {msg['total-results']} so far)")
+        if len(msg["items"]) < PAGE_SIZE or len(items) >= msg["total-results"]:
+            break                             # last page reached
+        params["cursor"] = msg["next-cursor"]  # bookmark for the next page
+        time.sleep(1)                         # be polite to Crossref between pages
+    else:
+        print(f"Warning: stopped after {MAX_PAGES} pages; some journal papers were skipped")
 
     papers = []
-    for item in msg["items"]:
+    for item in items:
         authors = [f"{a.get('given', '')} {a.get('family', '')}".strip()
                    for a in item.get("author", [])]
         abstract = clean(item.get("abstract", ""))

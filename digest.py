@@ -3,6 +3,8 @@ Weekly paper digest
 ===================
 1. FETCH  - last week's papers from arXiv (by category) and from journals
             (via the Crossref API, by ISSN).
+   FILL   - abstracts missing from Crossref, looked up in OpenAlex and
+            Semantic Scholar.
 2. SCORE  - each paper against the weighted keywords in topics.yaml.
 3. SAVE   - docs/digests/<date>.json, which the website in docs/ displays.
 
@@ -151,6 +153,107 @@ def fetch_all():
 
 
 # ------------------------------------------------------------------
+# 1b. FILL MISSING ABSTRACTS
+# ------------------------------------------------------------------
+# Many publishers (APS, Elsevier, ...) do not give abstracts to Crossref, so
+# those papers could only be scored on their title. Here we look the missing
+# abstracts up by DOI in two free scholarly databases:
+#   1. OpenAlex          (https://openalex.org)        - 50 DOIs per request
+#   2. Semantic Scholar  (https://www.semanticscholar.org) - only for the rest
+# Both also tell us whether the paper has an arXiv version; we store that
+# in paper["arxiv_id"] so duplicates can be recognised later.
+# If either service is down, the digest still runs, just with fewer abstracts.
+
+ARXIV_ID = re.compile(r"arxiv\.org/(?:abs|pdf)/([0-9]{4}\.[0-9]{4,5})", re.I)
+
+
+def abstract_from_inverted_index(index):
+    """OpenAlex stores abstracts as {word: [positions]}; rebuild the text."""
+    if not index:
+        return ""
+    words = {pos: word for word, positions in index.items() for pos in positions}
+    return " ".join(words[i] for i in sorted(words))
+
+
+def fill_from_openalex(papers):
+    """Fill abstracts (and arXiv IDs) for `papers` from OpenAlex, 50 at a time."""
+    by_doi = {p["id"][4:]: p for p in papers}          # "doi:10.1103/..." -> "10.1103/..."
+    dois = list(by_doi)
+    for start in range(0, len(dois), 50):
+        chunk = dois[start:start + 50]
+        params = {
+            "filter": "doi:" + "|".join(chunk),           # "|" means OR in OpenAlex
+            "per-page": 50,
+            "select": "doi,abstract_inverted_index,locations",
+            "mailto": CONFIG["contact_email"],            # OpenAlex's "polite pool"
+        }
+        results = requests.get("https://api.openalex.org/works",
+                               params=params, timeout=60).json().get("results", [])
+        for work in results:
+            doi = (work.get("doi") or "").lower().replace("https://doi.org/", "")
+            paper = by_doi.get(doi)
+            if not paper:
+                continue
+            if not paper["abstract"]:
+                paper["abstract"] = abstract_from_inverted_index(work.get("abstract_inverted_index"))
+            for loc in work.get("locations") or []:       # look for an arXiv copy
+                found = ARXIV_ID.search(loc.get("landing_page_url") or "")
+                if found:
+                    paper["arxiv_id"] = found.group(1)
+                    break
+        time.sleep(1)                                      # be polite between requests
+
+
+def fill_from_semantic_scholar(papers):
+    """Fill remaining abstracts (and arXiv IDs) from Semantic Scholar, 500 at a time."""
+    for start in range(0, len(papers), 500):
+        chunk = papers[start:start + 500]
+        resp = requests.post(
+            "https://api.semanticscholar.org/graph/v1/paper/batch",
+            params={"fields": "abstract,externalIds"},
+            json={"ids": ["DOI:" + p["id"][4:] for p in chunk]},
+            timeout=90)
+        if resp.status_code != 200:                        # e.g. 429 = too many requests
+            print(f"Semantic Scholar answered {resp.status_code}; skipping it this week")
+            return
+        for paper, info in zip(chunk, resp.json()):        # answers come back in the same order
+            if not info:
+                continue                                   # paper not in their database
+            if not paper["abstract"] and info.get("abstract"):
+                paper["abstract"] = info["abstract"]
+            arxiv = (info.get("externalIds") or {}).get("ArXiv")
+            if arxiv and not paper.get("arxiv_id"):
+                paper["arxiv_id"] = arxiv
+        time.sleep(3)
+
+
+def fill_missing_abstracts(papers):
+    """Look up abstracts for journal papers that arrived without one."""
+    journal = [p for p in papers if p["kind"] == "journal"]
+    missing = [p for p in journal if not p["abstract"]]
+    print(f"{len(missing)} of {len(journal)} journal papers have no abstract")
+    if not missing:
+        return
+
+    try:
+        fill_from_openalex(journal)       # all journal papers: also finds arXiv versions
+    except Exception as err:
+        print(f"OpenAlex failed: {err}")
+    still_missing = [p for p in missing if not p["abstract"]]
+    try:
+        fill_from_semantic_scholar(still_missing)
+    except Exception as err:
+        print(f"Semantic Scholar failed: {err}")
+
+    for p in missing:                      # tidy what we found, as for Crossref abstracts
+        p["abstract"] = re.sub(r"^Abstract\s*[:.]?\s*", "", clean(p["abstract"]), flags=re.I)
+    filled = sum(1 for p in missing if p["abstract"])
+    print(f"Abstracts filled: {filled} of {len(missing)} missing "
+          f"({len(missing) - len(still_missing)} from OpenAlex, "
+          f"{filled - (len(missing) - len(still_missing))} from Semantic Scholar)")
+
+
+# ------------------------------------------------------------------
 # 2. SCORE
 # ------------------------------------------------------------------
 def found(term, text):
@@ -296,6 +399,7 @@ def main():
     seen = set(json.loads(SEEN_FILE.read_text())) if SEEN_FILE.exists() else set()
     fresh = [p for p in fetch_all() if p["id"] not in seen]
     print(f"Fetched {len(fresh)} new papers")
+    fill_missing_abstracts(fresh)
 
     picked = [p for p in map(classify, fresh) if p]
     print(f"{len(picked)} match your topics")

@@ -88,7 +88,7 @@ def fetch_journals():
     Each answer includes a "next-cursor" bookmark; sending it back gives the
     next page. We stop when a page comes back short (that was the last one).
     """
-    filters = [f"from-pub-date:{START}", f"until-pub-date:{TODAY}"]
+    filters = [f"from-created-date:{START}", f"until-created-date:{TODAY}"]
     filters += [f"issn:{issn}" for issn in CONFIG["journals"].values()]  # ISSNs are OR-ed
     params = {
         "filter": ",".join(filters),
